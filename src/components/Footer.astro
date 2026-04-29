@@ -1,0 +1,40 @@
+---
+// 共通フッター — 1ファイル変更で全ページ反映（v1 で31ファイルに重複していた問題を解決）
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[var(--color-ink-navy)] text-white">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="md:col-span-2">
+        <p class="text-2xl font-bold mb-3">Contact</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          株式会社Contact<br />
+          医療職の才能を爆発させ、国を変える
+        </p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold mb-3 text-gray-200">会社情報</p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="/about/" class="hover:text-white transition-colors">私たちについて</a></li>
+          <li><a href="/business/" class="hover:text-white transition-colors">事業</a></li>
+          <li><a href="/news/" class="hover:text-white transition-colors">ニュース</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-semibold mb-3 text-gray-200">その他</p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="/contact/" class="hover:text-white transition-colors">お問い合わせ</a></li>
+          <li><a href="/privacy-policy/" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
+          <li><a href="/terms/" class="hover:text-white transition-colors">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+      <p class="text-xs text-gray-400">© {year} 株式会社Contact</p>
+      <p class="text-xs text-gray-500">
+        フッター変更は1ファイル（Footer.astro）で全ページ反映
+      </p>
+    </div>
+  </div>
+</footer>

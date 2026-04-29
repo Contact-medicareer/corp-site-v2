@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* メディキャリ デザイントークン（design_tokens.json から抜粋） */
+@theme {
+  /* ブランドカラー（コア） */
+  --color-medicareer-blue: #1E50A2;
+  --color-medicareer-blue-deep: #0F2E5C;
+  --color-medicareer-blue-light: #4A7DC9;
+  --color-revolution-red: #E60013;
+  --color-coral: #F26B5E;
+
+  /* インク・サーフェス */
+  --color-ink-navy: #1A2B47;
+  --color-ink-muted: #8F9CB3;
+  --color-surface: #FFFFFF;
+  --color-surface-dim: #F6F9FC;
+  --color-surface-container: #ECEFF5;
+  --color-outline: #94A0B0;
+  --color-outline-variant: #CFD7E6;
+
+  /* セマンティック */
+  --color-success: #197A4B;
+  --color-error: #BA1A1A;
+  --color-warning: #8A6A00;
+
+  /* チャート */
+  --color-chart-1: #1E50A2;
+  --color-chart-2: #0F2E5C;
+  --color-chart-3: #4A7DC9;
+  --color-chart-4: #9BBADD;
+  --color-chart-5: #F26B5E;
+
+  /* フォント */
+  --font-sans: "Zen Kaku Gothic New", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-en: "Inter", system-ui, sans-serif;
+
+  /* スペーシング（8pxグリッド） */
+  --spacing-section: 6rem;
+}
+
+/* ベース要素 */
+html {
+  font-family: var(--font-sans);
+  color: var(--color-ink-navy);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  line-height: 1.7;
+}
