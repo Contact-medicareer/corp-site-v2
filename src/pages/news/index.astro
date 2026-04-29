@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// v1 由来：contact-corp-site-v1/src/news/index.html の14件
+// 将来 microCMS / src/content/news/ に移行予定
+type NewsCategory = 'NEWS' | 'セミナー';
+interface NewsItem {
+  date: string;
+  category: NewsCategory;
+  title: string;
+  href: string;
+}
+
+const newsItems: NewsItem[] = [
+  {
+    date: '2025.10.21',
+    category: 'セミナー',
+    title: '信州オープンイノベーションフォーラムに登壇しました',
+    href: '/news/2025-10-21-shinshu-open-innovation-forum/',
+  },
+  {
+    date: '2025.09.05',
+    category: 'NEWS',
+    title:
+      '株式会社Contact、内閣府選定「スタートアップ・エコシステム拠点都市」キックオフイベントに出席',
+    href: '/news/2025-09-05-startup-ecosystem-kickoff/',
+  },
+  {
+    date: '2024.09.24',
+    category: 'NEWS',
+    title:
+      '9/24発売の『医療×起業 医師・医療者のためのスタートアップ起業ガイド』を一部執筆しました',
+    href: '/news/2024-09-24-iryou-kigyou-startup-guide/',
+  },
+  {
+    date: '2024.07.23',
+    category: 'セミナー',
+    title: 'HOYA株式会社様と共催セミナーを実施しました',
+    href: '/news/2024-07-23-hoya-cohosted-seminar-summer/',
+  },
+  {
+    date: '2024.05.01',
+    category: 'NEWS',
+    title: 'eコロンブスに表紙として掲載されました',
+    href: '/news/2024-05-01-ecolombus-cover-feature/',
+  },
+  {
+    date: '2024.03.05',
+    category: 'セミナー',
+    title: 'HOYA株式会社様と共催セミナーを実施しました',
+    href: '/news/2024-03-05-hoya-cohosted-seminar-spring/',
+  },
+  {
+    date: '2023.06.01',
+    category: 'セミナー',
+    title: '第6回Contactセミナー 国際医療福祉大学 熱海病院 准教授 後関利明 先生',
+    href: '/news/2023-06-01-contact-seminar-6-gosekiri/',
+  },
+  {
+    date: '2023.03.24',
+    category: 'セミナー',
+    title: '日本両眼視矯正研究会に登壇しました',
+    href: '/news/2023-03-24-binocular-vision-symposium/',
+  },
+  {
+    date: '2023.02.17',
+    category: 'NEWS',
+    title: 'デジタルヘルストレンド2023に掲載されました',
+    href: '/news/2023-02-17-digital-health-trend-2023/',
+  },
+  {
+    date: '2023.01.31',
+    category: 'NEWS',
+    title:
+      '株式会社Contactが信州ベンチャーサミット DX部門でグランプリを受賞しました',
+    href: '/news/2023-01-31-shinshu-venture-summit-grandprix/',
+  },
+  {
+    date: '2022.10.01',
+    category: 'NEWS',
+    title: '日本経済新聞に掲載されました',
+    href: '/news/2022-10-01-nikkei-feature/',
+  },
+  {
+    date: '2022.10.01',
+    category: 'NEWS',
+    title: '朝日新聞に掲載されました',
+    href: '/news/2022-10-01-asahi-feature/',
+  },
+  {
+    date: '2022.10.01',
+    category: 'NEWS',
+    title: '信濃毎日新聞に掲載されました',
+    href: '/news/2022-10-01-shinano-mainichi-feature/',
+  },
+  {
+    date: '2022.05.01',
+    category: 'NEWS',
+    title: '信州アクセラレーションプログラムに採択されました',
+    href: '/news/2022-05-01-shinshu-acceleration-program/',
+  },
+];
+
+const categoryStyle = (cat: NewsCategory) =>
+  cat === 'セミナー'
+    ? 'bg-[var(--color-coral)]/10 text-[var(--color-coral)] border border-[var(--color-coral)]/30'
+    : 'bg-[var(--color-medicareer-blue)]/10 text-[var(--color-medicareer-blue)] border border-[var(--color-medicareer-blue)]/30';
+---
+
+<BaseLayout
+  title="ニュース｜株式会社Contact"
+  description="株式会社Contactのプレスリリース・お知らせ・メディア掲載情報。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">ニュース</span>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3">
+          ニュース
+        </h1>
+        <p class="text-base text-[var(--color-ink-muted)]">
+          NEWS・セミナー登壇・メディア掲載
+        </p>
+      </div>
+    </section>
+
+    <!-- News List -->
+    <section class="py-16 md:py-20">
+      <div class="mx-auto max-w-[960px] px-6">
+        <ul class="divide-y divide-[var(--color-outline-variant)]">
+          {
+            newsItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="grid grid-cols-1 md:grid-cols-[110px_90px_1fr] gap-3 md:gap-6 py-6 px-2 md:items-center hover:bg-[var(--color-surface-dim)] transition-colors rounded-lg"
+                >
+                  <span class="text-sm font-en text-[var(--color-ink-muted)]">{item.date}</span>
+                  <span
+                    class={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium rounded-full w-fit ${categoryStyle(item.category)}`}
+                  >
+                    {item.category}
+                  </span>
+                  <span class="text-sm md:text-base text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors leading-relaxed">
+                    {item.title}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

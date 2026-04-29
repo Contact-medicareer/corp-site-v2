@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// v1 由来：contact-corp-site-v1/src/news/{slug}/index.html
+// 将来 microCMS / src/content/news/ に移行予定
+// 現状はサンプル3件のみ（依田の確認用）。残り11件は v1 を継続参照する。
+
+export async function getStaticPaths() {
+  const articles = [
+    {
+      slug: '2025-10-21-shinshu-open-innovation-forum',
+      date: '2025.10.21',
+      category: 'セミナー',
+      title: '信州オープンイノベーションフォーラムに登壇しました',
+      description:
+        '2025年10月21日、信州オープンイノベーションフォーラムに弊社代表の依田龍之介が登壇しました。医療・ヘルスケア領域での事業共創をテーマに議論を行いました。',
+      bodyHtml: `
+        <p>2025年10月21日、長野県内で開催された「信州オープンイノベーションフォーラム」に、株式会社Contact代表の依田龍之介が登壇いたしました。本フォーラムは、長野県内のスタートアップと既存企業との協業機会を創出することを目的に開催されているものです。</p>
+        <p>当日は、医療・ヘルスケア領域における事業共創をテーマに、参加企業の皆様とディスカッションを実施しました。弊社からは、医療職のキャリア支援を起点とした事業展開と、地域医療の生産性向上に向けた取り組みについてご紹介いたしました。</p>
+        <p>登壇内容の詳細や当日の模様については、後日改めて当ニュースページにて報告予定です。引き続き、弊社の活動についてご注目いただけますと幸いです。</p>
+      `,
+    },
+    {
+      slug: '2025-09-05-startup-ecosystem-kickoff',
+      date: '2025.09.05',
+      category: 'NEWS',
+      title:
+        '株式会社Contact、内閣府選定「スタートアップ・エコシステム拠点都市」キックオフイベントに出席',
+      description:
+        '2025年9月5日、内閣府が選定する「スタートアップ・エコシステム拠点都市」のキックオフイベントに、弊社代表の依田龍之介が出席しました。',
+      bodyHtml: `
+        <p>2025年9月5日、内閣府が選定する「スタートアップ・エコシステム拠点都市」のキックオフイベントに、株式会社Contact代表の依田龍之介が出席いたしました。</p>
+        <p>本制度は、世界に伍するスタートアップ・エコシステムの形成を目的に、地域単位で重点支援対象を選定するものです。当日は、選定地域の企業・支援機関・自治体関係者が一堂に会し、今後の連携方針について意見交換が行われました。</p>
+        <p>弊社は医療・ヘルスケア領域のスタートアップとして、地域医療の生産性向上と人材流動性の向上に向けた取り組みを進めてまいります。本イベントを契機に、選定地域内外との協業をより一層加速してまいります。</p>
+      `,
+    },
+    {
+      slug: '2024-09-24-iryou-kigyou-startup-guide',
+      date: '2024.09.24',
+      category: 'NEWS',
+      title:
+        '9/24発売の『医療×起業 医師・医療者のためのスタートアップ起業ガイド』を一部執筆しました',
+      description:
+        '2024年9月24日に発売された書籍『医療×起業 医師・医療者のためのスタートアップ起業ガイド』に、弊社代表の依田龍之介が一部執筆者として参加しました。',
+      bodyHtml: `
+        <p>2024年9月24日に発売された書籍『医療×起業 医師・医療者のためのスタートアップ起業ガイド』に、株式会社Contact代表の依田龍之介が一部執筆者として参加いたしました。</p>
+        <p>本書は、医師・医療従事者を対象に、医療領域でのスタートアップ起業に必要な実務知識・資金調達・事業設計の考え方を体系的にまとめた一冊です。弊社代表は、視能訓練士という医療職のバックグラウンドを活かし、医療現場の課題発見から事業化に至る実践的な過程について寄稿しております。</p>
+        <p>医療職のキャリアの選択肢として「起業」を提示することは、弊社のミッションである医療者の才能開花とも重なります。本書が、医療領域での新たな事業創出の一助となれば幸いです。</p>
+      `,
+    },
+  ] as const;
+
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+
+const categoryStyle =
+  article.category === 'セミナー'
+    ? 'bg-[var(--color-coral)]/10 text-[var(--color-coral)] border border-[var(--color-coral)]/30'
+    : 'bg-[var(--color-medicareer-blue)]/10 text-[var(--color-medicareer-blue)] border border-[var(--color-medicareer-blue)]/30';
+---
+
+<BaseLayout title={`${article.title}｜株式会社Contact`} description={article.description}>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[960px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en flex-wrap"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">HOME</a>
+          <span>›</span>
+          <a href="/news/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">
+            ニュース
+          </a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)] truncate">{article.title}</span>
+        </nav>
+        <h1
+          class="text-2xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight"
+        >
+          {article.title}
+        </h1>
+        <div class="flex items-center gap-4 flex-wrap">
+          <span class="text-sm font-en text-[var(--color-ink-muted)]">{article.date}</span>
+          <span
+            class={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium rounded-full ${categoryStyle}`}
+          >
+            {article.category}
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <article class="py-16 md:py-20">
+      <div class="mx-auto max-w-[720px] px-6">
+        <div
+          class="prose prose-base max-w-none text-[var(--color-ink-navy)]/85 leading-relaxed [&>p]:mb-6 [&>p]:text-base md:[&>p]:text-lg"
+          set:html={article.bodyHtml}
+        />
+        <div
+          class="mt-12 pt-8 border-t border-[var(--color-outline-variant)]"
+        >
+          <a
+            href="/news/"
+            class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-medicareer-blue)] bg-white border border-[var(--color-medicareer-blue)] rounded-full hover:bg-[var(--color-medicareer-blue)] hover:text-white transition-colors"
+          >
+            ← ニュース一覧に戻る
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

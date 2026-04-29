@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const services = [
+  {
+    no: '01',
+    label: 'Service 01 ／ Career Agent',
+    title: 'メディキャリエージェント',
+    lead: '医療職に特化した <strong>転職エージェント</strong>。視能訓練士・看護師・薬剤師・理学療法士・作業療法士・言語聴覚士など、医療職が一般企業へ転職する際の伴走支援を行います。',
+    target:
+      '医療職全般。臨床経験を活かして一般企業（医療系スタートアップ・MR・カスタマーサクセス・コンサル等）に転職したい方。',
+    feature:
+      '業界知識を持つキャリアアドバイザーが、Must / Want / NG の転職軸を徹底ヒアリング。求人企業との相性を見極めた上での提案で、入職後の定着率を重視します。',
+    cta: 'https://medicareer-agent-lp.vercel.app/',
+    alt: false,
+  },
+  {
+    no: '02',
+    label: 'Service 02 ／ Online Salon',
+    title: 'メディキャリ大学',
+    lead: '医療職向けの <strong>キャリア・収入アップ動画オンラインサロン</strong>(月額¥4,980)。年収交渉・転職活動・副業・スキルアップなど、医療職に特化した実用コンテンツを継続配信しています。',
+    target:
+      '「いきなり転職するのは怖いけれど、まずキャリアの選択肢を学びたい」医療職。コーチング・エージェントへの導線にもなる入り口サービス。',
+    feature:
+      '動画コンテンツ・限定ライブ配信・コミュニティ参加権・キャリア相談割引。月額制で継続的な学習が可能。',
+    cta: 'https://lp-winova.jp/ct/lp02a/001/',
+    alt: true,
+  },
+  {
+    no: '03',
+    label: 'Service 03 ／ Coaching',
+    title: 'メディキャリコーチング',
+    lead: '医療職向けの <strong>1対1の伴走型キャリアコーチング</strong>(¥150,000〜¥300,000)。3〜6ヶ月のプログラムで、自己理解・キャリア言語化・行動計画策定・実行までを継続支援します。',
+    target:
+      'キャリアの方向性に深く悩んでいる医療職、自分の強みを言語化したい方、転職以外の選択肢(独立・副業・院内昇進)も含めて整理したい方。',
+    feature:
+      '専属コーチによる隔週1on1セッション・課題ワーク・キャリア戦略書の作成。短期の表面的な相談ではなく、人生設計レベルでの伴走。',
+    cta: 'https://training-lp.vercel.app/',
+    alt: false,
+  },
+  {
+    no: '04',
+    label: 'Founding Service ／ Web Media',
+    title: 'コンタクトキャリア（祖業）',
+    lead: '眼科で働く医療者(特に視能訓練士)のスキルアップを応援する <strong>Webメディア</strong>。月間約1万人が訪問する祖業の集客資産であり、業界における信頼の起点となっています。',
+    target:
+      '創業時の事業ドメイン。視能訓練士コミュニティとの関係資産・SEO資産・業界知識の蓄積基盤。メディキャリ事業の信頼の源泉。',
+    feature:
+      'メディキャリブランド統合後も独立して運営継続。眼科特化の専門メディアとして役割を維持しつつ、メディキャリへの認知導線として機能。',
+    cta: 'https://contact.ne.jp/media/',
+    alt: true,
+  },
+];
+---
+
+<BaseLayout
+  title="事業内容｜株式会社Contact"
+  description="株式会社Contactの事業内容。医療職特化のキャリア支援を3つのサービスで展開。メディキャリエージェント・メディキャリ大学・メディキャリコーチング、そして祖業のコンタクトキャリア。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">事業内容</span>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3">
+          事業内容
+        </h1>
+        <p class="text-base text-[var(--color-ink-muted)]">
+          医療職のキャリアを多角的に支える事業ポートフォリオ
+        </p>
+      </div>
+    </section>
+
+    <!-- 全体の位置づけ -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p
+          class="text-sm tracking-[0.2em] uppercase text-[var(--color-medicareer-blue)] font-en mb-3"
+        >
+          Our Business
+        </p>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight"
+        >
+          医療職のキャリアを、<br />3つのサービスで支える。
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          株式会社Contactは、医療職のキャリアを<strong class="text-[var(--color-ink-navy)]"
+            >「学ぶ」「相談する」「転職する」</strong
+          >の3つの軸で支援します。<br />
+          創業事業のコンタクトキャリアで培った医療現場の解像度を起点に、医療職全体に届く支援体制を構築しています。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              業界の構造的課題は、医療職のキャリア選択肢が狭く、結果として給与が上がりにくく、人材が流出しサービス品質が下がる悪循環にあります。
+            </p>
+            <p>
+              私たちは「次のキャリア」を選べる仕組みを提供することで、医療職一人ひとりの可能性を解放し、業界全体の健全化を目指します。
+            </p>
+          </div>
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              大手の人材紹介会社が本気で取り組まない領域 — それが「医療職特化」のキャリア支援です。
+            </p>
+            <p>
+              市場規模が中途半端で、業界知識が必要で、信頼形成に時間がかかる。この3条件があるからこそ、当事者性を持つ私たちにしかできない事業として成立しています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 各サービス -->
+    {
+      services.map((s) => (
+        <section
+          class={
+            s.alt
+              ? 'bg-[var(--color-surface-dim)] py-20 md:py-24'
+              : 'py-20 md:py-24'
+          }
+        >
+          <div class="mx-auto max-w-[960px] px-6">
+            <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-medicareer-blue)] font-en mb-3">
+              {s.label}
+            </p>
+            <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+              {s.title}
+            </h2>
+            <p
+              class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10"
+              set:html={s.lead}
+            />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              <div>
+                <h3 class="text-base font-medium text-[var(--color-ink-navy)] mb-3">対象</h3>
+                <p class="text-sm md:text-base text-[var(--color-ink-navy)]/80 leading-relaxed">
+                  {s.target}
+                </p>
+              </div>
+              <div>
+                <h3 class="text-base font-medium text-[var(--color-ink-navy)] mb-3">特徴</h3>
+                <p class="text-sm md:text-base text-[var(--color-ink-navy)]/80 leading-relaxed">
+                  {s.feature}
+                </p>
+              </div>
+            </div>
+            <div class="text-center">
+              <a
+                href={s.cta}
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-medicareer-blue)] bg-white border border-[var(--color-medicareer-blue)] rounded-full hover:bg-[var(--color-medicareer-blue)] hover:text-white transition-colors"
+              >
+                サービスサイトを見る →
+              </a>
+            </div>
+          </div>
+        </section>
+      ))
+    }
+
+    <!-- AIネイティブ -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p
+          class="text-sm tracking-[0.2em] uppercase text-[var(--color-medicareer-blue)] font-en mb-3"
+        >
+          Organization ／ AI-Native Company
+        </p>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight"
+        >
+          AIネイティブ組織としての挑戦
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          私たちは少人数の人間チーム＋複数の AI エージェントで構成される <strong
+            class="text-[var(--color-ink-navy)]">AIネイティブカンパニー</strong
+          >を志向しています。事業運営・コンテンツ生成・顧客対応・経営判断まで、AIをチームの一員として活用しています。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              AIに置き換えるのではなく、AIに <strong class="text-[var(--color-ink-navy)]"
+                >担当領域を委譲</strong
+              >する。人間は意思決定・関係構築・現場の温度感を担い、AIは情報整理・ドラフト作成・継続実行を担う。
+            </p>
+            <p>
+              この体制により、人材紹介の世界で珍しい「少人数で高密度なオペレーション」を実現しています。
+            </p>
+          </div>
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              AIの活用方針・組織設計の詳細は <a
+                href="/ai/"
+                class="text-[var(--color-revolution-red)] underline hover:no-underline"
+                >/ai/</a
+              > ページをご覧ください。
+            </p>
+            <p>
+              当社の AI 運用は、医療職のキャリア支援というミッションを、より少ない人手・より高い品質で届けるための実践的選択です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-[var(--color-medicareer-blue)] py-20 md:py-24">
+      <div class="mx-auto max-w-[800px] px-6 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          事業に関するご相談・ご提携
+        </h2>
+        <p class="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+          投資・業務提携・取材・採用候補者紹介など、お気軽にお問い合わせください。
+        </p>
+        <a
+          href="/contact/"
+          class="inline-flex items-center px-8 py-4 text-base font-medium text-[var(--color-medicareer-blue)] bg-white rounded-full hover:bg-white/90 transition-colors"
+        >
+          お問い合わせ
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
