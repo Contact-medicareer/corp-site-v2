@@ -3,9 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-// v1 由来：contact-corp-site-v1/src/news/{slug}/index.html
+// v1 由来：contact-corp-site-v1/src/news/{slug}/index.html の14件
 // 将来 microCMS / src/content/news/ に移行予定
-// 現状はサンプル3件のみ（依田の確認用）。残り11件は v1 を継続参照する。
+// 14件すべてをページ生成。3件は本文済み、11件はダミー本文（後日実コンテンツに差し替え）。
 
 export async function getStaticPaths() {
   const articles = [
@@ -48,6 +48,150 @@ export async function getStaticPaths() {
         <p>2024年9月24日に発売された書籍『医療×起業 医師・医療者のためのスタートアップ起業ガイド』に、株式会社Contact代表の依田龍之介が一部執筆者として参加いたしました。</p>
         <p>本書は、医師・医療従事者を対象に、医療領域でのスタートアップ起業に必要な実務知識・資金調達・事業設計の考え方を体系的にまとめた一冊です。弊社代表は、視能訓練士という医療職のバックグラウンドを活かし、医療現場の課題発見から事業化に至る実践的な過程について寄稿しております。</p>
         <p>医療職のキャリアの選択肢として「起業」を提示することは、弊社のミッションである医療者の才能開花とも重なります。本書が、医療領域での新たな事業創出の一助となれば幸いです。</p>
+      `,
+    },
+    {
+      slug: '2024-07-23-hoya-cohosted-seminar-summer',
+      date: '2024.07.23',
+      category: 'セミナー',
+      title: 'HOYA株式会社様と共催セミナーを実施しました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：HOYA株式会社様と共催セミナーを実施しました（2024.07.23）</p>
+        <p>カテゴリ：セミナー</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2024-05-01-ecolombus-cover-feature',
+      date: '2024.05.01',
+      category: 'NEWS',
+      title: 'eコロンブスに表紙として掲載されました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：eコロンブスに表紙として掲載されました（2024.05.01）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2024-03-05-hoya-cohosted-seminar-spring',
+      date: '2024.03.05',
+      category: 'セミナー',
+      title: 'HOYA株式会社様と共催セミナーを実施しました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：HOYA株式会社様と共催セミナーを実施しました（2024.03.05）</p>
+        <p>カテゴリ：セミナー</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2023-06-01-contact-seminar-6-gosekiri',
+      date: '2023.06.01',
+      category: 'セミナー',
+      title: '第6回Contactセミナー 国際医療福祉大学 熱海病院 准教授 後関利明 先生',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：第6回Contactセミナー 国際医療福祉大学 熱海病院 准教授 後関利明 先生（2023.06.01）</p>
+        <p>カテゴリ：セミナー</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2023-03-24-binocular-vision-symposium',
+      date: '2023.03.24',
+      category: 'セミナー',
+      title: '日本両眼視矯正研究会に登壇しました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：日本両眼視矯正研究会に登壇しました（2023.03.24）</p>
+        <p>カテゴリ：セミナー</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2023-02-17-digital-health-trend-2023',
+      date: '2023.02.17',
+      category: 'NEWS',
+      title: 'デジタルヘルストレンド2023に掲載されました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：デジタルヘルストレンド2023に掲載されました（2023.02.17）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2023-01-31-shinshu-venture-summit-grandprix',
+      date: '2023.01.31',
+      category: 'NEWS',
+      title:
+        '株式会社Contactが信州ベンチャーサミット DX部門でグランプリを受賞しました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：株式会社Contactが信州ベンチャーサミット DX部門でグランプリを受賞しました（2023.01.31）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2022-10-01-nikkei-feature',
+      date: '2022.10.01',
+      category: 'NEWS',
+      title: '日本経済新聞に掲載されました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：日本経済新聞に掲載されました（2022.10.01）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2022-10-01-asahi-feature',
+      date: '2022.10.01',
+      category: 'NEWS',
+      title: '朝日新聞に掲載されました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：朝日新聞に掲載されました（2022.10.01）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2022-10-01-shinano-mainichi-feature',
+      date: '2022.10.01',
+      category: 'NEWS',
+      title: '信濃毎日新聞に掲載されました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：信濃毎日新聞に掲載されました（2022.10.01）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
+      `,
+    },
+    {
+      slug: '2022-05-01-shinshu-acceleration-program',
+      date: '2022.05.01',
+      category: 'NEWS',
+      title: '信州アクセラレーションプログラムに採択されました',
+      description: '（ダミー）詳細は後日掲載予定です。',
+      bodyHtml: `
+        <p>このページは現在準備中です。詳細情報は後日掲載予定です。</p>
+        <p>記事タイトル：信州アクセラレーションプログラムに採択されました（2022.05.01）</p>
+        <p>カテゴリ：NEWS</p>
+        <p>※ ダミーコンテンツ。本文は後日 microCMS 連携 or 手動更新で差し替え予定。</p>
       `,
     },
   ] as const;
