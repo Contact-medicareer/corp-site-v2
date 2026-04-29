@@ -1,0 +1,45 @@
+---
+// コーポレートサイト Hero — Revolution Red アクセント
+// v1 由来：contact-corp-site-v1/src/index.html (40〜55行)
+// 設計：白背景 + 大きな見出し + 句点を Revolution Red アクセント
+---
+
+<section class="relative bg-white overflow-hidden">
+  <!-- 背景：右上から薄いブルーのグラデ装飾 -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-white via-white to-[var(--color-surface-dim)]"></div>
+
+  <!-- 装飾円（Revolution Red のごく薄いオーブ） -->
+  <div class="absolute top-[-10%] right-[-10%] w-[420px] h-[420px] rounded-full bg-[var(--color-revolution-red)]/5 blur-3xl -z-10 pointer-events-none"></div>
+
+  <div class="mx-auto max-w-6xl px-6 py-24 md:py-36">
+    <div class="max-w-4xl">
+      <p class="text-xs md:text-sm font-medium tracking-[0.22em] uppercase text-[var(--color-revolution-red)] mb-6 font-en">
+        Revolution in Healthcare
+      </p>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] tracking-[-0.02em] text-[var(--color-ink-navy)] mb-8">
+        医療に、<br />
+        革命を起こす<span class="text-[var(--color-revolution-red)]">。</span>
+      </h1>
+      <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-[1.9] mb-12 max-w-2xl">
+        医療職一人ひとりの可能性を解放し、医療の未来を変える。<br />
+        株式会社Contactは、医療職特化のキャリア支援事業を運営しています。
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a
+          href="/recruit/"
+          class="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-[var(--color-medicareer-blue)] rounded-md hover:bg-[var(--color-medicareer-blue-deep)] transition-colors"
+        >
+          採用情報を見る
+        </a>
+        <a
+          href="/about/"
+          class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-medicareer-blue)] hover:gap-3 transition-all"
+        >
+          私たちについて
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
