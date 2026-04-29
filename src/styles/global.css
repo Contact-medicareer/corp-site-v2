@@ -65,7 +65,7 @@ body {
 }
 .legal-prose h2 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-ink-navy);
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -74,7 +74,7 @@ body {
 }
 .legal-prose h3 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-ink-navy);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
@@ -102,7 +102,7 @@ body {
 }
 .legal-prose strong {
   color: var(--color-ink-navy);
-  font-weight: 700;
+  font-weight: 500;
 }
 .legal-prose a {
   color: var(--color-revolution-red);
@@ -127,7 +127,7 @@ body {
 }
 .legal-prose table th {
   background-color: var(--color-surface-dim);
-  font-weight: 600;
+  font-weight: 500;
   width: 30%;
   color: var(--color-ink-navy);
 }
@@ -153,4 +153,22 @@ body {
   border-radius: 0 0.25rem 0.25rem 0;
   font-size: 0.875rem;
   color: rgba(26, 43, 71, 0.8);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   BRAND.md規約: font-weight 400/500 のみ・600以上禁止
+   出典: brand-visual-spec.md L313-323
+   Tailwind の font-bold/extrabold/black を強制上書き
+   ───────────────────────────────────────────────────────────────── */
+.font-bold,
+.font-extrabold,
+.font-black {
+  font-weight: 500;
+}
+
+.legal-prose h2,
+.legal-prose h3,
+.legal-prose strong,
+.legal-prose th {
+  font-weight: 500;
 }
