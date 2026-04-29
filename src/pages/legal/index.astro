@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="特定商取引法に基づく表記｜株式会社Contact"
+  description="株式会社Contactが提供する有料サービスにおける特定商取引法に基づく表記。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">特定商取引法に基づく表記</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          特定商取引法に基づく表記
+        </h1>
+        <p class="text-sm text-[var(--color-ink-muted)]">
+          適用範囲：当社運営の有料サービス全般 ／ 制定日：2026年4月27日
+        </p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="py-16 md:py-20">
+      <article class="mx-auto max-w-[800px] px-6 legal-prose">
+        <p>
+          本表記は、特定商取引に関する法律第11条に基づき、当社が提供する有料サービスについての必要事項を表示するものです。
+        </p>
+
+        <div class="legal-note">
+          ※ 本ページはモックアップ用のダミー文書です。実運用の際は弁護士監修のもと正式版を作成してください。
+        </div>
+
+        <h2>事業者情報</h2>
+        <table>
+          <tbody>
+            <tr><th>販売事業者</th><td>株式会社Contact</td></tr>
+            <tr><th>代表責任者</th><td>依田 龍之介</td></tr>
+            <tr><th>所在地</th><td>長野県北佐久郡軽井沢町大字長倉2809-1</td></tr>
+            <tr>
+              <th>連絡先電話番号</th>
+              <td>0267-31-5977<br /><small>※ 電話受付：平日10:00〜18:00（土日祝・年末年始を除く）</small></td>
+            </tr>
+            <tr><th>連絡先メールアドレス</th><td>info@contact.ne.jp</td></tr>
+            <tr><th>運営統括責任者</th><td>依田 龍之介</td></tr>
+          </tbody>
+        </table>
+
+        <h2>料金</h2>
+        <table>
+          <thead>
+            <tr><th>サービス</th><th>料金（税込）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>メディキャリ大学</td><td>月額 4,980円</td></tr>
+            <tr><td>メディキャリ大学 初月キャンペーン</td><td>初月 1,500円</td></tr>
+            <tr><td>メディキャリコーチング ベーシック</td><td>150,000円（3ヶ月）</td></tr>
+            <tr><td>メディキャリコーチング プレミアム</td><td>300,000円（6ヶ月）</td></tr>
+          </tbody>
+        </table>
+        <p>※ メディキャリエージェント（求職者向け人材紹介サービス）は無料です。</p>
+
+        <h2>商品代金以外の必要料金</h2>
+        <p>インターネット接続料金、通信料金等は利用者の負担となります。</p>
+
+        <h2>支払方法</h2>
+        <ul>
+          <li>クレジットカード決済（Visa / Mastercard / JCB / American Express / Diners Club）</li>
+          <li>口座振込（コーチング契約時のみ）</li>
+        </ul>
+
+        <h2>支払時期</h2>
+        <ul>
+          <li><strong>月額制サービス（メディキャリ大学）</strong>：毎月の更新日に当月分を決済</li>
+          <li><strong>コーチング</strong>：契約締結時に一括または分割（応相談）</li>
+        </ul>
+
+        <h2>サービス提供時期</h2>
+        <ul>
+          <li><strong>メディキャリ大学</strong>：決済完了後、即時利用可能</li>
+          <li><strong>メディキャリコーチング</strong>：契約後10営業日以内に初回セッション開始</li>
+          <li><strong>メディキャリエージェント</strong>：登録後3営業日以内に初回面談日程を調整</li>
+        </ul>
+
+        <h2>キャンセル・返品・解約</h2>
+
+        <h3>メディキャリ大学（月額制）</h3>
+        <p>
+          解約をご希望の場合、解約月の末日までにマイページから解約手続きを行ってください。月の途中で解約した場合の日割り返金はいたしません。
+        </p>
+
+        <h3>メディキャリコーチング</h3>
+        <p>
+          契約後8日以内であれば、書面によるクーリング・オフが可能です。それ以降は、当社の責に帰すべき事由がない限り、原則として返金はいたしません。
+        </p>
+
+        <h3>不良品・サービス不能の場合</h3>
+        <p>当社の責に帰すべき事由によりサービスが提供できない場合は、未提供分の料金を返金いたします。</p>
+
+        <h2>動作環境</h2>
+        <p>本サービスは以下の環境での動作を推奨します。</p>
+        <ul>
+          <li>ブラウザ：Google Chrome / Safari / Microsoft Edge の最新版</li>
+          <li>OS：Windows 10以降 / macOS 12以降 / iOS 15以降 / Android 10以降</li>
+          <li>通信環境：安定したインターネット接続（動画視聴には10Mbps以上を推奨）</li>
+        </ul>
+
+        <h2>その他</h2>
+        <p>
+          本表記に記載のない事項については、<a href="/terms/">利用規約</a>および<a
+            href="/privacy-policy/">プライバシーポリシー</a>に従います。
+        </p>
+
+        <p class="legal-revision">
+          制定日：2026年4月27日 ／ 最終改定：2026年4月27日<br />
+          株式会社Contact
+        </p>
+      </article>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const principles = [
+  {
+    no: '01',
+    title: '主役は、人間。',
+    body: '意思決定する者は人間。責任を持つ者も人間。AI は判断を肩代わりしない。私たちは、医療職一人ひとりのキャリアと人生に向き合う。その「向き合う者」は、最後まで人間でなければならない。AI が出す答えに従うのではなく、AI を使って自分の判断をより速く・より深くする。',
+  },
+  {
+    no: '02',
+    title: 'AIは、強力な道具。',
+    body: '道具は崇めるものではなく、使い倒すもの。私たちは AI を「魔法」として神格化しない。AI は、人間の能力を拡張するための、これまで存在しなかったほど強力な道具である。道具として正しく扱えば、一人で何倍もの仕事ができる。だから、私たちは道具の使い方を真剣に学び続ける。',
+  },
+  {
+    no: '03',
+    title: '道具を使いこなす者が、遠くまで行ける。',
+    body: 'AI 時代に勝ち残るのは、AI ではなく「AI を使いこなす人間」だ。私たちは少数精鋭で、医療業界の構造的課題に挑む。一人が10倍働けるなら、5人で50人分の仕事ができる。道具を使いこなす者が、遠くまで行ける。私たちは、その先頭を走る。',
+  },
+];
+
+const practices = [
+  {
+    tag: 'AI Native Team',
+    title: 'AI エージェントが「同僚」のチーム',
+    body: '経営判断・候補者対応・マーケ施策・文書レビューの各業務に専属の AI エージェントを配置。人間メンバーと同じく役割と名前を持つ「担当者」として扱う。',
+  },
+  {
+    tag: 'Workspace Memory',
+    title: 'AIにルールを教え、再現性を保つ',
+    body: '会社のルール・業務フロー・ブランドガイドを構造化された形でAIワークスペースに格納。誰が AI に相談しても、当社のルールに沿った答えが返ってくる仕組み。',
+  },
+  {
+    tag: 'Human in the Loop',
+    title: '最終判断は、必ず人間',
+    body: '候補者への送信、顧客への意思表示、契約・採用の決定。AI が下書きを作っても、世に出す前に必ず人間が確認する。生成と評価を分離することで、品質と責任を担保する。',
+  },
+  {
+    tag: 'Continuous Learning',
+    title: '道具の使い方を、学び続ける',
+    body: '下北沢 AI 朝会の主催、新ツール検証、社内ナレッジ蓄積。「ツールが変わっても本質は変わらない」原則のもと、本質層と道具層を分離して運用する。',
+  },
+];
+---
+
+<BaseLayout
+  title="AIを使う｜株式会社Contact"
+  description="Bet AI ではなく、Use AI. 主役は人間、AIは強力な道具。株式会社ContactのAIに対する姿勢と、AIネイティブ組織としての実践を紹介します。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-ink-navy)] text-white py-32 md:py-48 relative overflow-hidden">
+      <div class="mx-auto max-w-[1200px] px-6 text-center">
+        <h1 class="text-6xl md:text-9xl font-black leading-none tracking-tight">
+          AIを使う<span class="text-[var(--color-revolution-red)]">。</span>
+        </h1>
+        <p class="mt-12 text-xs tracking-[0.3em] uppercase text-white/50 font-en">
+          ↓ Scroll
+        </p>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="py-24 md:py-32">
+      <div class="mx-auto max-w-[800px] px-6 text-center">
+        <p
+          class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-8"
+        >
+          Our Stance on AI
+        </p>
+        <p class="text-4xl md:text-6xl font-bold text-[var(--color-ink-navy)] leading-tight mb-10">
+          Bet AI ではなく、<br />
+          <span class="text-[var(--color-revolution-red)]">Use AI.</span>
+        </p>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed">
+          AI に賭けるのでも、AI に丸投げするのでもない。<br />
+          私たちは、AI を <strong class="text-[var(--color-revolution-red)]">使う</strong> 側にいる。
+        </p>
+      </div>
+    </section>
+
+    <!-- Three Principles -->
+    <section class="bg-[var(--color-ink-navy)] text-white py-24 md:py-32">
+      <div class="mx-auto max-w-[1000px] px-6">
+        <div class="text-center mb-16">
+          <p
+            class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3"
+          >
+            Three Principles
+          </p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+            私たちの、AI との向き合い方
+          </h2>
+        </div>
+        <div class="space-y-12">
+          {principles.map((p) => (
+            <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-6 md:gap-10 items-start">
+              <div class="text-5xl md:text-6xl font-en font-black text-[var(--color-revolution-red)] leading-none">
+                {p.no}
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 leading-snug">
+                  {p.title}
+                </h3>
+                <p class="text-sm md:text-base text-white/80 leading-relaxed">
+                  {p.body}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice -->
+    <section class="py-24 md:py-32">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="text-center mb-16">
+          <p
+            class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3"
+          >
+            Our Practice
+          </p>
+          <h2 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] leading-tight">
+            私たちが、社内で実践していること
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {practices.map((p) => (
+            <div
+              class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+            >
+              <span
+                class="inline-block text-xs tracking-[0.15em] uppercase text-[var(--color-revolution-red)] font-en mb-4"
+              >
+                {p.tag}
+              </span>
+              <h3 class="text-xl font-bold text-[var(--color-ink-navy)] mb-4 leading-snug">
+                {p.title}
+              </h3>
+              <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+                {p.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Recruit CTA -->
+    <section class="bg-[var(--color-revolution-red)] py-24 md:py-32">
+      <div class="mx-auto max-w-[800px] px-6 text-center text-white">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          同じ姿勢で、<br />挑戦したい仲間へ。
+        </h2>
+        <p class="text-base md:text-lg text-white/90 mb-10 leading-relaxed">
+          AI を使い、構造から医療を変える。<br />
+          その挑戦に、心が動いた方をお待ちしています。
+        </p>
+        <a
+          href="/recruit/"
+          class="inline-flex items-center px-10 py-4 text-base font-medium text-[var(--color-revolution-red)] bg-white rounded-full hover:bg-white/90 transition-colors"
+        >
+          採用情報を見る →
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

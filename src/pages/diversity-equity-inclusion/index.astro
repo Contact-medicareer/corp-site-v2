@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="DE&Iポリシー｜株式会社Contact"
+  description="株式会社Contactのダイバーシティ・エクイティ・インクルージョン（DE&I）ポリシー。すべての関係者が個性を活かして活躍できる組織を目指します。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">DE&amp;Iポリシー</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          DE&amp;Iポリシー
+        </h1>
+        <p class="text-sm text-[var(--color-ink-muted)] font-en">
+          Diversity, Equity & Inclusion Policy
+        </p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="py-16 md:py-20">
+      <article class="mx-auto max-w-[800px] px-6 legal-prose">
+        <p>
+          株式会社Contact（以下「当社」）は、すべての関係者が個性を活かして最大限活躍できる組織を目指します。本ポリシーは、当社のダイバーシティ・エクイティ・インクルージョン（DE&I）に対する基本姿勢を定めるものです。
+        </p>
+
+        <h2>1. 基本方針</h2>
+        <p>
+          当社は、性別・年齢・国籍・出身地・学歴・経歴・障害の有無・性的指向・性自認・宗教・信条・家族構成その他いかなる属性によっても、機会の不均衡や差別が生じない組織運営を行います。
+        </p>
+
+        <h2>2. 私たちの考えるDE&I</h2>
+        <ul>
+          <li><strong>Diversity（多様性）</strong>：異なる背景・スキル・視点を持つ人々が共に働く状態を尊重する</li>
+          <li><strong>Equity（公平性）</strong>：一律の同じ機会ではなく、各人の状況に応じて必要な支援を提供する</li>
+          <li>
+            <strong>Inclusion（包摂）</strong>：誰もが「自分の意見が尊重されている」と感じられる組織文化を作る
+          </li>
+        </ul>
+
+        <h2>3. 医療業界における意義</h2>
+        <p>
+          医療業界には、職種ごとの専門性・キャリアパスの違い・性別比の偏り・地域差など、独特の多様性が存在します。当社は医療職特化のキャリア支援を行う立場として、これらの多様性を理解し、当事者一人ひとりに最適化された支援を提供します。
+        </p>
+
+        <h2>4. 具体的な取り組み</h2>
+        <ul>
+          <li>採用：候補者の能力と価値観の整合性を最優先で評価し、属性による差別を行わない</li>
+          <li>働き方：リモートワーク・フレックスタイムを基本とし、家庭事情・健康状態・地域に左右されない働き方を支援する</li>
+          <li>意思決定：少数派の意見も含めた議論を行う場を設け、AIを活用した客観的な視点も導入する</li>
+          <li>育成：個人の強みを活かす役割設計を行い、画一的なキャリアパスを押し付けない</li>
+        </ul>
+
+        <h2>5. AIネイティブ組織における DE&I</h2>
+        <p>
+          当社は AI エージェントをチームの一員として運用しています。AI の活用は、人間メンバーの属性に起因する負荷を平準化し、多様な背景を持つメンバーが活躍できる環境作りにも寄与しています。一方で、AI 自身のバイアスにも注意を払い、定期的に AI の出力を検証する運用を行います。
+        </p>
+
+        <h2>6. 候補者・取引先に対するコミットメント</h2>
+        <p>
+          当社の事業活動を通じて関わる候補者・取引先・地域社会に対しても、本ポリシーの精神に基づき、公平で尊厳ある対応を行います。
+        </p>
+
+        <h2>7. 改訂履歴</h2>
+        <ul>
+          <li>2026年4月28日：初版制定</li>
+        </ul>
+
+        <p class="mt-12 text-sm text-[var(--color-ink-navy)]/70">
+          お問い合わせ先：<a href="mailto:info@contact.ne.jp">info@contact.ne.jp</a>
+        </p>
+
+        <div class="mt-12 pt-8 border-t border-[var(--color-outline-variant)]">
+          <a
+            href="/"
+            class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-ink-navy)] bg-white border border-[var(--color-outline-variant)] rounded-full hover:bg-[var(--color-surface-dim)] transition-colors"
+          >
+            ← トップページへ戻る
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

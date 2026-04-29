@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="採用情報｜株式会社Contact"
+  description="株式会社Contactの採用情報。医療に革命を起こすチームの一員になりませんか。少数精鋭・高裁量・AIネイティブな組織で、医療業界の構造を変える挑戦をしています。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">採用情報</span>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          医療に革命を起こす、<br />仲間を募集しています。
+        </h1>
+        <p class="text-base text-[var(--color-ink-muted)]">
+          少数精鋭 × AIネイティブ × 高裁量
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Contact -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="text-center mb-12">
+          <p
+            class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3"
+          >
+            Why Contact
+          </p>
+          <h2
+            class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight"
+          >
+            なぜContactで働くのか
+          </h2>
+          <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed max-w-[800px] mx-auto">
+            株式会社Contactは、医療職特化のキャリア支援を通じて、医療業界の構造的課題に向き合う会社です。<br />
+            「医療に革命を起こす」というミッションのもと、人間とAIが協働するAIネイティブな組織を作っています。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <div
+              class="text-5xl font-en font-bold text-[var(--color-revolution-red)] mb-4"
+            >
+              01
+            </div>
+            <h3 class="text-xl font-bold text-[var(--color-ink-navy)] mb-3 leading-snug">
+              医療業界の構造を変える
+            </h3>
+            <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              給与が上がりにくい、人材が流出するという医療業界の悪循環。それを内側から変える事業に挑戦できます。
+            </p>
+          </div>
+          <div
+            class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <div
+              class="text-5xl font-en font-bold text-[var(--color-revolution-red)] mb-4"
+            >
+              02
+            </div>
+            <h3 class="text-xl font-bold text-[var(--color-ink-navy)] mb-3 leading-snug">
+              AIネイティブな働き方
+            </h3>
+            <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              AIエージェントを「ツール」ではなく「同僚」として扱う組織。一人で複数の仕事を回せる仕組みが整っています。
+            </p>
+          </div>
+          <div
+            class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <div
+              class="text-5xl font-en font-bold text-[var(--color-revolution-red)] mb-4"
+            >
+              03
+            </div>
+            <h3 class="text-xl font-bold text-[var(--color-ink-navy)] mb-3 leading-snug">
+              少数精鋭・高裁量
+            </h3>
+            <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              少人数のチームで事業を回すため、一人ひとりの裁量と影響範囲が大きい。経営に近い距離で意思決定に関われます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[800px] px-6 text-center">
+        <p
+          class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3"
+        >
+          Open Positions
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          最新の募集情報を見る
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 mb-10 leading-relaxed">
+          現在募集中の職種は、採用管理サービス「HERP Hire」にて公開しています。<br />
+          最新の募集要項・応募条件は下記よりご確認ください。
+        </p>
+        <a
+          href="https://herp.careers/v1/contact"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center px-8 py-4 text-base font-medium text-white bg-[var(--color-revolution-red)] rounded-full hover:bg-[var(--color-revolution-red-dark)] transition-colors"
+        >
+          募集職種一覧はこちら →
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-[var(--color-revolution-red)] py-20 md:py-24">
+      <div class="mx-auto max-w-[800px] px-6 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          まずは話を聞きたい方へ
+        </h2>
+        <p class="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+          カジュアル面談・採用に関するご質問など、お気軽にお問い合わせください。
+        </p>
+        <a
+          href="/contact/"
+          class="inline-flex items-center px-8 py-4 text-base font-medium text-[var(--color-revolution-red)] bg-white rounded-full hover:bg-white/90 transition-colors"
+        >
+          お問い合わせ
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

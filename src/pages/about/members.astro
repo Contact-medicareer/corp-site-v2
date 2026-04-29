@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const aiAgents = [
+  { name: '司令塔のオケちゃん', role: '業務全体の振り分け・委譲・統合を担当する司令塔AI' },
+  { name: '経営サポートのケイちゃん', role: 'KPI・財務・優先順位整理を担当するエグゼクティブサポートAI' },
+  { name: 'キャリアアドバイザーのキャリちゃん', role: '候補者対応・面談準備・求人選定を担当するCAサポートAI' },
+  { name: 'マーケティングのマケちゃん', role: '広告・SNS・スカウト施策を担当するマーケAI' },
+  { name: '文書レビューのレビちゃん', role: '送信・公開前の全文書品質チェックを担当するレビューAI' },
+  { name: 'ナレッジ管理のナレちゃん', role: '外部情報の評価・蓄積・社内ルール反映を担当するナレッジAI' },
+];
+---
+
+<BaseLayout
+  title="メンバー｜株式会社Contact"
+  description="株式会社Contactの経営メンバー紹介。代表取締役 依田龍之介をはじめとする、AIネイティブカンパニーを推進するチームをご紹介します。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <a href="/about/" class="hover:text-[var(--color-revolution-red)] transition-colors">私たちについて</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">メンバー</span>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          メンバー
+        </h1>
+        <p class="text-base text-[var(--color-ink-muted)]">
+          株式会社Contactの経営メンバー
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Our Team
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          少人数 × AIネイティブの<br />運営チーム
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed">
+          私たちは、人間2名＋複数のAIエージェントで構成される少人数チームで事業を運営しています。<br />
+          個人の専門性を最大化しつつ、AIに委譲できる作業はすべて委譲する。それが私たちの組織設計です。
+        </p>
+      </div>
+    </section>
+
+    <!-- Founder -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[1000px] px-6">
+        <div class="mb-12">
+          <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+            Founder & CEO
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] leading-tight">
+            代表取締役
+          </h2>
+        </div>
+        <div
+          class="bg-white rounded-2xl p-8 md:p-12 border border-[var(--color-outline-variant)] grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start"
+        >
+          <div>
+            <img
+              src="/images/yoda-ryunosuke.webp"
+              alt="代表取締役 依田龍之介"
+              class="w-full rounded-xl"
+              width="200"
+              height="200"
+            />
+          </div>
+          <div>
+            <p class="text-xl md:text-2xl font-bold text-[var(--color-revolution-red)] mb-6 leading-snug">
+              「医療者の才能を爆発させ、<br />国を変える。」
+            </p>
+            <div class="space-y-4 text-sm md:text-base text-[var(--color-ink-navy)]/80 leading-relaxed">
+              <p>
+                <strong class="text-[var(--color-ink-navy)]">1998年生まれ。視能訓練士の国家資格を持つ医療職出身。</strong>
+                視能訓練士養成大学を卒業後、帝京大学大学院 医療技術研究科 視能矯正学専攻にて修士号を取得。日本ディープラーニング協会 G検定（2020年）も保有する、医療×AIの両軸を専門領域とする経営者です。
+              </p>
+              <p>
+                大学院での研究と医療系ITベンチャーでの実務を両立しながら、医療業界の構造的課題と向き合う。経済産業省主催のジャパン・ヘルスケアビジネスコンテストに2年連続で出場、コロナ禍の3歳児健診現場での気づきを起点に、
+                <strong class="text-[var(--color-ink-navy)]">2022年1月（24歳）で株式会社Contactを設立</strong>。
+              </p>
+              <p>
+                これまで10件以上の事業を実際に手で試した上で、「医療職特化のキャリア支援」が「夢中になれる × 構造化できる × 反メインストリーム」を同時に満たす唯一の事業だと確信。日経新聞掲載・信州ベンチャーサミット DX部門グランプリ・メディア出演21件・加藤浩晃氏著書に2回掲載など、当事者性のある事業家として実績を重ねている。
+              </p>
+              <p>
+                「センターピンを見極め、ゲームのルールを理解し、コントローラブルにする」「51点で出して、後で改善する」が信条。下北沢AI朝会の主宰者として、AIネイティブ経営の実践と発信を続けている。
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-[var(--color-outline-variant)]">
+              <strong class="text-[var(--color-ink-navy)] text-base">依田 龍之介 / Ryunosuke Yoda</strong>
+              <span class="text-sm text-[var(--color-ink-muted)] ml-3">
+                代表取締役 ／ 視能訓練士 ／ G検定保有
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketing -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Marketing
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          マーケティング担当
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          集客・認知拡大・候補者獲得を担う、メディキャリのマーケティング推進担当。<br />
+          高校時代からの代表との関係性を起点に、創業期から事業を共にしている共同推進者です。
+        </p>
+        <dl
+          class="bg-[var(--color-surface-dim)] rounded-xl border border-[var(--color-outline-variant)] divide-y divide-[var(--color-outline-variant)]"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-6 px-6 py-5">
+            <dt class="text-sm font-medium text-[var(--color-ink-muted)]">担当領域</dt>
+            <dd class="text-sm text-[var(--color-ink-navy)]">
+              広告運用 ／ SNSマーケティング ／ スカウト配信 ／ オウンドメディア戦略
+            </dd>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-6 px-6 py-5">
+            <dt class="text-sm font-medium text-[var(--color-ink-muted)]">役割</dt>
+            <dd class="text-sm text-[var(--color-ink-navy)]">
+              マーケティング施策の現場推進・AIマーケティングエージェントとの協働・代理店マネジメント
+            </dd>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-6 px-6 py-5">
+            <dt class="text-sm font-medium text-[var(--color-ink-muted)]">名前</dt>
+            <dd class="text-sm text-[var(--color-ink-navy)]">越山 直樹（Naoki Koshiyama）</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- AI Team -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          AI Team
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          AIメンバー（運用エージェント）
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          AIも一人の担当者として扱う。それが私たちのAIネイティブ組織のベースです。<br />
+          各エージェントは役割・人格・名前を持ち、人間メンバーと同じく「チームの一員」として動きます。
+        </p>
+        <dl
+          class="bg-white rounded-xl border border-[var(--color-outline-variant)] divide-y divide-[var(--color-outline-variant)]"
+        >
+          {aiAgents.map((a) => (
+            <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2 md:gap-6 px-6 py-5">
+              <dt class="text-sm font-medium text-[var(--color-ink-navy)]">{a.name}</dt>
+              <dd class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">{a.role}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="mt-8 text-sm text-[var(--color-ink-navy)]/70">
+          AI運用方針の詳細は
+          <a
+            href="/ai/"
+            class="text-[var(--color-revolution-red)] underline hover:no-underline"
+          >/ai/</a>
+          をご覧ください。
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[var(--color-revolution-red)] py-20 md:py-24">
+      <div class="mx-auto max-w-[800px] px-6 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          仲間を募集しています
+        </h2>
+        <p class="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+          医療に革命を起こすチームに、あなたの才能を預けてください。<br />
+          現在、CA・マーケ・コーポレート・エンジニアなど複数のポジションでメンバーを探しています。
+        </p>
+        <a
+          href="/recruit/"
+          class="inline-flex items-center px-8 py-4 text-base font-medium text-[var(--color-revolution-red)] bg-white rounded-full hover:bg-white/90 transition-colors"
+        >
+          採用情報を見る
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
