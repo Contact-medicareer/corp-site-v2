@@ -1,0 +1,134 @@
+---
+// コーポレートサイト About セクション — ミッション要約 + 3つの価値観 + 会社情報
+// v1 由来：contact-corp-site-v1/src/index.html (60〜69行) + about/index.html (47〜120行)
+// 短縮版：トップページに収まる凝縮型として再構成
+---
+
+<!-- ミッション要約 -->
+<section id="mission" class="bg-[var(--color-surface-dim)] py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-6">
+    <p class="text-xs md:text-sm font-medium tracking-[0.18em] uppercase text-[var(--color-medicareer-blue)] mb-4 font-en">
+      What We Do
+    </p>
+    <h2 class="text-3xl md:text-5xl font-medium text-[var(--color-ink-navy)] mb-6 leading-tight">
+      医療の構造を、<br class="md:hidden" />内側から変える<span class="text-[var(--color-revolution-red)]">。</span>
+    </h2>
+    <p class="text-base md:text-lg text-[var(--color-ink-navy)]/85 leading-[1.9] max-w-3xl mb-8">
+      医療業界の構造的課題（給与の伸び悩み・人材流出・サービス品質の低下）に対して、変革的アプローチを取る意志を持つ会社。代表自身が国家資格を持つ医療職出身で、医療現場の課題を内側から知った上で起業しました。
+    </p>
+    <a
+      href="/about/"
+      class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-medicareer-blue)] hover:gap-3 transition-all"
+    >
+      私たちについて、詳しく
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- 3つの価値観 -->
+<section class="bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-6">
+    <p class="text-xs md:text-sm font-medium tracking-[0.18em] uppercase text-[var(--color-medicareer-blue)] mb-4 font-en">
+      Our Values
+    </p>
+    <h2 class="text-3xl md:text-5xl font-medium text-[var(--color-ink-navy)] mb-12 leading-tight">
+      私たちが大切にする<br class="md:hidden" />3つの価値観
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div class="rounded-2xl p-8 bg-[var(--color-surface-dim)] border border-[var(--color-outline-variant)]/50 hover:border-[var(--color-medicareer-blue)]/40 transition-colors">
+        <div class="text-4xl font-medium font-en text-[var(--color-medicareer-blue)] mb-4">01</div>
+        <h3 class="text-xl font-medium text-[var(--color-ink-navy)] mb-1 leading-snug">夢中駆動</h3>
+        <p class="text-xs tracking-wider uppercase text-[var(--color-ink-muted)] mb-5 font-en">Be Driven by Passion</p>
+        <p class="text-sm text-[var(--color-ink-navy)]/80 leading-[1.85]">
+          努力は夢中・没頭に勝てない。繰り返しの定型業務を最大の死とみなし、一人ひとりが本当に夢中になれる仕事に集中できる組織を目指します。
+        </p>
+      </div>
+
+      <div class="rounded-2xl p-8 bg-[var(--color-surface-dim)] border border-[var(--color-outline-variant)]/50 hover:border-[var(--color-medicareer-blue)]/40 transition-colors">
+        <div class="text-4xl font-medium font-en text-[var(--color-medicareer-blue)] mb-4">02</div>
+        <h3 class="text-xl font-medium text-[var(--color-ink-navy)] mb-1 leading-snug">構造化思考</h3>
+        <p class="text-xs tracking-wider uppercase text-[var(--color-ink-muted)] mb-5 font-en">Think in Structure</p>
+        <p class="text-sm text-[var(--color-ink-navy)]/80 leading-[1.85]">
+          事業・情報・人材をすべてDB化し仕組みで管理する。属人的なセンスではなく、誰もが再現できる仕組みで事業を動かします。
+        </p>
+      </div>
+
+      <div class="rounded-2xl p-8 bg-[var(--color-surface-dim)] border border-[var(--color-outline-variant)]/50 hover:border-[var(--color-medicareer-blue)]/40 transition-colors">
+        <div class="text-4xl font-medium font-en text-[var(--color-medicareer-blue)] mb-4">03</div>
+        <h3 class="text-xl font-medium text-[var(--color-ink-navy)] mb-1 leading-snug">反メインストリーム</h3>
+        <p class="text-xs tracking-wider uppercase text-[var(--color-ink-muted)] mb-5 font-en">Beyond the Mainstream</p>
+        <p class="text-sm text-[var(--color-ink-navy)]/80 leading-[1.85]">
+          大手が取らない領域で勝つ。王道の逆を行く。同じ戦い方をしないことで、私たちにしか生み出せない価値を届けます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 代表 + 会社情報 -->
+<section class="bg-[var(--color-surface-dim)] py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-16 items-start">
+      <!-- 代表写真 + 名前 -->
+      <div>
+        <div class="aspect-square w-full max-w-[280px] mx-auto md:mx-0 rounded-2xl overflow-hidden bg-[var(--color-outline-variant)]/30 mb-6">
+          <img
+            src="/images/yoda-ryunosuke.png"
+            alt="代表取締役 依田龍之介"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="text-xs tracking-wider uppercase text-[var(--color-ink-muted)] font-en mb-2">Founder &amp; CEO</p>
+        <p class="text-2xl font-medium text-[var(--color-ink-navy)] mb-1">依田 龍之介</p>
+        <p class="text-sm text-[var(--color-ink-navy)]/70">株式会社Contact 代表取締役</p>
+      </div>
+
+      <!-- 代表メッセージ + 会社情報 -->
+      <div>
+        <p class="text-xs md:text-sm font-medium tracking-[0.18em] uppercase text-[var(--color-medicareer-blue)] mb-4 font-en">
+          Founder's Message
+        </p>
+        <p class="text-xl md:text-2xl font-medium text-[var(--color-ink-navy)] leading-snug mb-6">
+          「周りでガヤガヤ言ってる人に、<br />未来が見えている人はいなかった。」
+        </p>
+        <p class="text-sm md:text-base text-[var(--color-ink-navy)]/80 leading-[1.9] mb-10">
+          国家資格（視能訓練士）取得後、大学院での研究と医療系ITベンチャーでの実務を両立。経済産業省主催のジャパン・ヘルスケアビジネスコンテストに2年連続出場し、24歳で株式会社Contactを設立。これまで10件以上の事業を実際に手で試した末に、「医療職特化のキャリア支援」が「夢中になれる × 構造化できる × 反メインストリーム」を同時に満たす唯一の事業だと確信しました。
+        </p>
+
+        <!-- 会社情報テーブル -->
+        <p class="text-xs md:text-sm font-medium tracking-[0.18em] uppercase text-[var(--color-medicareer-blue)] mb-4 font-en">
+          Company
+        </p>
+        <dl class="border-t border-[var(--color-outline-variant)]">
+          <div class="grid grid-cols-[120px_1fr] py-3 border-b border-[var(--color-outline-variant)] text-sm">
+            <dt class="text-[var(--color-ink-muted)]">商号</dt>
+            <dd class="text-[var(--color-ink-navy)]">株式会社Contact</dd>
+          </div>
+          <div class="grid grid-cols-[120px_1fr] py-3 border-b border-[var(--color-outline-variant)] text-sm">
+            <dt class="text-[var(--color-ink-muted)]">代表取締役</dt>
+            <dd class="text-[var(--color-ink-navy)]">依田 龍之介</dd>
+          </div>
+          <div class="grid grid-cols-[120px_1fr] py-3 border-b border-[var(--color-outline-variant)] text-sm">
+            <dt class="text-[var(--color-ink-muted)]">設立</dt>
+            <dd class="text-[var(--color-ink-navy)]">2022年1月17日</dd>
+          </div>
+          <div class="grid grid-cols-[120px_1fr] py-3 border-b border-[var(--color-outline-variant)] text-sm">
+            <dt class="text-[var(--color-ink-muted)]">本社</dt>
+            <dd class="text-[var(--color-ink-navy)]">長野県北佐久郡軽井沢町大字長倉2809-1</dd>
+          </div>
+          <div class="grid grid-cols-[120px_1fr] py-3 border-b border-[var(--color-outline-variant)] text-sm">
+            <dt class="text-[var(--color-ink-muted)]">オフィス</dt>
+            <dd class="text-[var(--color-ink-navy)]">東京都世田谷区下北沢</dd>
+          </div>
+          <div class="grid grid-cols-[120px_1fr] py-3 border-b border-[var(--color-outline-variant)] text-sm">
+            <dt class="text-[var(--color-ink-muted)]">事業内容</dt>
+            <dd class="text-[var(--color-ink-navy)]">医療職特化のキャリア支援（人材紹介 / コーチング / 動画オンラインサロン）</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
