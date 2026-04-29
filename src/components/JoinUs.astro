@@ -1,0 +1,36 @@
+---
+// JoinUs セクション — 採用 CTA（v1 由来：contact-corp-site-v1/src/index.html 212〜236行）
+// 設計：ダーク背景 + 中央揃え + 大きな CTA ボタン
+---
+
+<section class="relative isolate overflow-hidden text-white">
+  <!-- ダーク背景（ink-navy → medicareer-blue-deep） -->
+  <div
+    class="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--color-ink-navy)] via-[var(--color-medicareer-blue-deep)] to-[var(--color-ink-navy)]"
+  ></div>
+
+  <div class="relative z-10 mx-auto max-w-[920px] px-6 py-24 md:py-32 text-center">
+    <div
+      class="flex items-center justify-center gap-3 mb-4 text-xs tracking-[0.18em] uppercase text-white/70 font-en"
+    >
+      <span class="text-[var(--color-coral)] font-medium font-en text-base">05</span>
+      <span>Join Us</span>
+    </div>
+
+    <h2 class="text-3xl md:text-4xl lg:text-5xl leading-[1.25] mb-6">
+      医療に革命を起こす<br />
+      仲間を募集しています<span class="text-[var(--color-coral)]">。</span>
+    </h2>
+
+    <p class="text-base md:text-lg text-white/85 leading-[1.95] mb-10 max-w-[640px] mx-auto">
+      AI ネイティブな少数精鋭チームで、医療を構造から変える挑戦を一緒に。
+    </p>
+
+    <a
+      href="/recruit/"
+      class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-[var(--color-medicareer-blue-deep)] font-medium text-base hover:bg-[var(--color-coral)] hover:text-white hover:-translate-y-0.5 hover:shadow-lg transition-all"
+    >
+      採用情報を見る
+    </a>
+  </div>
+</section>
