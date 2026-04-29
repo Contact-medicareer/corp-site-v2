@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const profile = [
+  { dt: '商号', dd: '株式会社Contact ／ Contact, Inc.' },
+  { dt: '代表取締役', dd: '依田 龍之介' },
+  { dt: '設立', dd: '2022年1月17日' },
+  { dt: '決算月', dd: '9月' },
+  { dt: '所在地（本社）', dd: '長野県北佐久郡軽井沢町大字長倉2809-1' },
+  { dt: '所在地（オフィス）', dd: '東京都世田谷区下北沢' },
+  { dt: '電話番号', dd: '0267-31-5977（平日10:00〜18:00）' },
+  { dt: 'メール', dd: 'info@contact.ne.jp' },
+  { dt: '法人番号', dd: '6100001034989' },
+  {
+    dt: '事業内容',
+    dd: '医療職特化のキャリア支援事業（メディキャリブランドの運営）／ 医療者向けWebメディアの運営（コンタクトキャリア）／ AIネイティブ組織運営の実践と発信',
+  },
+  { dt: '取引銀行', dd: 'みずほ銀行 ／ 上田信用金庫 ／ PayPay銀行' },
+  { dt: '顧問', dd: '加藤 浩晃 先生（メンター・株主）' },
+];
+
+const history = [
+  { date: '2022年1月', body: '株式会社Contact設立（代表 依田 龍之介・24歳）。長野県軽井沢町に本社を置く' },
+  { date: '2022年5月', body: '信州アクセラレーションプログラムに採択' },
+  { date: '2022年10月', body: '日本経済新聞・朝日新聞・信濃毎日新聞に取り組みが掲載' },
+  { date: '2023年1月', body: '信州ベンチャーサミット DX部門でグランプリを受賞' },
+  { date: '2023年2月', body: '業界レポート『デジタルヘルストレンド2023』に事業掲載' },
+  { date: '2023年3〜6月', body: '日本両眼視矯正研究会・第6回Contactセミナーなど学術・専門コミュニティでの登壇を本格化' },
+  { date: '2024年3〜7月', body: 'HOYA株式会社様との共催セミナーを実施。眼科医療従事者向けキャリア支援を推進' },
+  { date: '2024年5月', body: '経営情報誌『eコロンブス』に代表が表紙として掲載' },
+  {
+    date: '2024年（メディキャリ開始）',
+    body: '視能訓練士特化から医療職全体に対象を拡張。「メディキャリ」ブランドを立ち上げ、3つのサービス（大学・エージェント・コーチング）を展開',
+  },
+  { date: '2024年9月', body: '『医療×起業 医師・医療者のためのスタートアップ起業ガイド』に代表が一部執筆参加' },
+  { date: '2025年9月', body: '内閣府選定「スタートアップ・エコシステム拠点都市」キックオフイベントに出席' },
+  { date: '2025年10月', body: '信州オープンイノベーションフォーラムに代表が登壇' },
+  { date: '2026年〜', body: 'AIネイティブカンパニーへの組織転換を本格推進。コーポレートサイト v1 公開' },
+];
+
+const awards = [
+  '信州ベンチャーサミット DX部門 グランプリ（2023年）',
+  '信州アクセラレーションプログラム採択（2022年）',
+  '経済産業省主催 ジャパン・ヘルスケアビジネスコンテスト 2年連続出場',
+];
+
+const media = [
+  '日本経済新聞',
+  '朝日新聞',
+  '信濃毎日新聞',
+  '経営情報誌『eコロンブス』表紙掲載',
+  '業界レポート『デジタルヘルストレンド2023』',
+  '『医療×起業』書籍に代表が一部執筆',
+  '加藤浩晃氏著書に2回掲載',
+  'その他、メディア出演 計21件以上',
+];
+---
+
+<BaseLayout
+  title="会社概要｜株式会社Contact"
+  description="株式会社Contactの会社概要。商号・所在地・設立・代表・事業内容・沿革・受賞歴・メディア掲載などの基本情報をご紹介します。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <a href="/about/" class="hover:text-[var(--color-revolution-red)] transition-colors">私たちについて</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">会社概要</span>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          会社概要
+        </h1>
+        <p class="text-base text-[var(--color-ink-muted)]">
+          株式会社Contact / Contact, Inc.
+        </p>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Company Profile
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-10 leading-tight">
+          基本情報
+        </h2>
+        <dl
+          class="bg-[var(--color-surface-dim)] rounded-xl border border-[var(--color-outline-variant)] divide-y divide-[var(--color-outline-variant)]"
+        >
+          {profile.map((p) => (
+            <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-6 px-6 py-5">
+              <dt class="text-sm font-medium text-[var(--color-ink-muted)]">{p.dt}</dt>
+              <dd class="text-sm text-[var(--color-ink-navy)] leading-relaxed">{p.dd}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          History
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          沿革
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          創業から現在までの主な歩み。<br />
+          事業領域を「視能訓練士特化」から「医療職全体」へと進化させてきました。
+        </p>
+        <dl
+          class="bg-white rounded-xl border border-[var(--color-outline-variant)] divide-y divide-[var(--color-outline-variant)]"
+        >
+          {history.map((h) => (
+            <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6 px-6 py-5">
+              <dt class="text-sm font-medium text-[var(--color-revolution-red)] font-en">{h.date}</dt>
+              <dd class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">{h.body}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <!-- Awards & Media -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Awards & Media
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          受賞歴・メディア掲載
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          第三者からの評価と、メディアでの紹介実績の一部です。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <h3 class="text-lg font-bold text-[var(--color-ink-navy)] mb-4">主な受賞</h3>
+            <ul class="list-disc pl-6 space-y-2 text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              {awards.map((a) => <li>{a}</li>)}
+            </ul>
+          </div>
+          <div
+            class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <h3 class="text-lg font-bold text-[var(--color-ink-navy)] mb-4">主なメディア掲載</h3>
+            <ul class="list-disc pl-6 space-y-2 text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              {media.map((m) => <li>{m}</li>)}
+            </ul>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-[var(--color-ink-navy)]/70">
+          最新情報・詳細は
+          <a
+            href="/news/"
+            class="text-[var(--color-revolution-red)] underline hover:no-underline"
+          >ニュース</a>
+          をご覧ください。
+        </p>
+      </div>
+    </section>
+
+    <!-- Access -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Access
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          アクセス
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          本社は長野県軽井沢、業務オフィスは東京都下北沢の2拠点体制で運営しています。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-white rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <h3 class="text-lg font-bold text-[var(--color-ink-navy)] mb-4">本社（軽井沢）</h3>
+            <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              長野県北佐久郡軽井沢町大字長倉2809-1<br />
+              北陸新幹線 軽井沢駅から車で約15分
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-xl p-8 border border-[var(--color-outline-variant)]"
+          >
+            <h3 class="text-lg font-bold text-[var(--color-ink-navy)] mb-4">下北沢オフィス</h3>
+            <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+              東京都世田谷区下北沢<br />
+              小田急線・京王井の頭線 下北沢駅から徒歩圏内（来訪時は事前ご連絡をお願いします）
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[var(--color-revolution-red)] py-20 md:py-24">
+      <div class="mx-auto max-w-[800px] px-6 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          お問い合わせ
+        </h2>
+        <p class="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+          投資・取材・採用・業務提携など、お気軽にご相談ください。
+        </p>
+        <a
+          href="/contact/"
+          class="inline-flex items-center px-8 py-4 text-base font-medium text-[var(--color-revolution-red)] bg-white rounded-full hover:bg-white/90 transition-colors"
+        >
+          お問い合わせ
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const values = [
+  {
+    no: '01',
+    title: '夢中駆動',
+    en: 'Be Driven by Passion',
+    body: '努力は夢中・没頭に勝てない。繰り返しの定型業務を最大の死とみなし、一人ひとりが本当に夢中になれる仕事に集中できる組織を目指します。「夢中になれない仕事は AI に任せる」が私たちの基本姿勢です。人間は人間にしかできない判断・関係構築・現場感に集中する。',
+  },
+  {
+    no: '02',
+    title: '構造化思考',
+    en: 'Think in Structure',
+    body: '事業・情報・人材をすべてDB化し仕組みで管理する。属人的なセンスではなく、誰もが再現できる仕組みで事業を動かします。「同じ品質を、誰がやっても、何度でも」が私たちの目標です。仕組みで動かすからこそ、AIエージェントとも協働できる組織になります。',
+  },
+  {
+    no: '03',
+    title: '反メインストリーム',
+    en: 'Beyond the Mainstream',
+    body: '大手が取らない領域で勝つ。王道の逆を行く。同じ戦い方をしないことで、私たちにしか生み出せない価値を届けます。「メインストリームの逆張り」が我々のポジション。医療職特化・地方拠点・AIネイティブ・少人数高密度。これらは全て大手の死角です。',
+  },
+];
+
+const compass = [
+  { num: '①', title: '51点で出す', body: '完璧を待たず最低限で世に出す。出してから改善する方が、出さずに磨くより速く良いものになる。' },
+  { num: '②', title: 'センターピンを見極める', body: '事業・施策・タスクの最重要レバーを特定し、そこに集中する。八方美人な施策は採らない。' },
+  { num: '③', title: 'ゲームのルールを理解する', body: '業界・市場・顧客の構造を理解した上で動く。ルールを知らずに戦わない。' },
+  { num: '④', title: 'コントローラブルにする', body: '運や偶然に頼らない。仕組み化・データ化・KPI化で、再現可能な状態を作る。' },
+  { num: '⑤', title: 'AI に委譲する', body: '人間でなくてもできる仕事は AI に委ねる。人間は人間にしかできないことに集中する。' },
+  { num: '⑥', title: '文化を作る側にいる', body: '既存の文化に乗るのではなく、新しい文化を作る側に立つ。それが反メインストリームの実装。' },
+];
+---
+
+<BaseLayout
+  title="ミッション・ビジョン・バリュー｜株式会社Contact"
+  description="株式会社Contactのミッション「医療に革命を起こす」、ビジョン、3つのバリュー（夢中駆動・構造化思考・反メインストリーム）と行動指針。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <a href="/about/" class="hover:text-[var(--color-revolution-red)] transition-colors">私たちについて</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">ミッション・ビジョン・バリュー</span>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          ミッション・<br />ビジョン・バリュー
+        </h1>
+        <p class="text-base text-[var(--color-ink-muted)]">
+          私たちが目指す未来と、その実現を支える価値観
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Mission
+        </p>
+        <h2 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          医療に、革命を起こす。
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          医療職一人ひとりの可能性を解放することで、医療業界の構造的課題を内側から変える。<br />
+          私たちのミッションは、医療職の「次のキャリア」を選べる仕組みを作ることです。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              医療業界には、給与が上がりにくい・人材が流出しサービス品質が下がるという
+              <strong class="text-[var(--color-ink-navy)]">構造的な悪循環</strong>
+              があります。私たちはこの循環を断ち切ります。
+            </p>
+            <p>
+              外側から破壊しに来る存在ではなく、当事者性を持つ
+              <strong class="text-[var(--color-ink-navy)]">内側を知る変革者</strong>
+              として、医療の未来を医療職と一緒に作っていく。それが私たちの立ち位置です。
+            </p>
+          </div>
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              キャリアの選択肢を広げることが、医療職の収入と尊厳を守り、ひいては医療の質を支える。これは経営者の願望ではなく、構造的な必然です。
+            </p>
+            <p>
+              すべては「目の前の医療職一人」の可能性を解放することから始まります。一人を変えれば現場が変わり、現場が変われば業界が変わる。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+          Vision
+        </p>
+        <h2 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+          医療者の才能を爆発させ、<br />国を変える。
+        </h2>
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed mb-10">
+          医療の生産性を100倍にすることで、社会保障費を圧縮し、国家の持続可能性に貢献する。<br />
+          これが私たちの長期ビジョンです。
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              日本の医療費は年々増加し、社会保障の持続可能性が問われています。一方、医療現場では人材不足・属人化・低い生産性が常態化しています。
+            </p>
+            <p>
+              この2つの課題は、表裏一体です。
+              <strong class="text-[var(--color-ink-navy)]">医療者の生産性を抜本的に上げること</strong>
+              こそが、社会保障費を圧縮し、国の持続可能性を取り戻す唯一の道だと私たちは信じています。
+            </p>
+          </div>
+          <div class="space-y-4 text-[var(--color-ink-navy)]/80">
+            <p>
+              医療者の才能が爆発する社会を作る。それは「医療者がもっと働く社会」ではなく、
+              <strong class="text-[var(--color-ink-navy)]">医療者が本当に得意なことに集中できる社会</strong>
+              を意味します。
+            </p>
+            <p>
+              キャリアの選択肢を広げ、AIによる業務代替を進め、医療現場の生産性を桁違いに引き上げる。これが私たちの 2030 年代のテーマです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="text-center mb-12">
+          <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+            Values
+          </p>
+          <h2 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-6 leading-tight">
+            私たちが大切にする<br />3つの価値観
+          </h2>
+          <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed max-w-[800px] mx-auto">
+            日々の意思決定の拠り所となる、3つのバリュー。<br />
+            採用・評価・事業判断のすべてがこの3つから派生します。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {values.map((v) => (
+            <div
+              class="bg-[var(--color-surface-dim)] rounded-xl p-8 border border-[var(--color-outline-variant)]"
+            >
+              <div
+                class="text-5xl font-en font-bold text-[var(--color-revolution-red)] mb-4"
+              >
+                {v.no}
+              </div>
+              <h3 class="text-xl font-bold text-[var(--color-ink-navy)] mb-2 leading-snug">
+                {v.title}
+              </h3>
+              <p class="text-sm font-en text-[var(--color-ink-muted)] mb-4">
+                {v.en}
+              </p>
+              <p class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+                {v.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Compass -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-24">
+      <div class="mx-auto max-w-[960px] px-6">
+        <div class="text-center mb-12">
+          <p class="text-sm tracking-[0.2em] uppercase text-[var(--color-revolution-red)] font-en mb-3">
+            Compass
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-4 leading-tight">
+            行動指針
+          </h2>
+          <p class="text-base md:text-lg text-[var(--color-ink-navy)]/80 leading-relaxed">
+            バリューを日々の行動に落とし込むための、6つの羅針盤。<br />
+            意思決定に迷ったとき、これらに立ち返ります。
+          </p>
+        </div>
+        <dl
+          class="bg-white rounded-xl border border-[var(--color-outline-variant)] divide-y divide-[var(--color-outline-variant)]"
+        >
+          {compass.map((c) => (
+            <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2 md:gap-6 px-6 py-5">
+              <dt class="text-sm font-medium text-[var(--color-ink-navy)]">
+                <span class="text-[var(--color-revolution-red)] mr-2">{c.num}</span>{c.title}
+              </dt>
+              <dd class="text-sm text-[var(--color-ink-navy)]/80 leading-relaxed">
+                {c.body}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[var(--color-revolution-red)] py-20 md:py-24">
+      <div class="mx-auto max-w-[800px] px-6 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          この理念に共感する<br />仲間を募集しています。
+        </h2>
+        <p class="text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+          採用・取材・提携など、お気軽にお問い合わせください。
+        </p>
+        <a
+          href="/recruit/"
+          class="inline-flex items-center px-8 py-4 text-base font-medium text-[var(--color-revolution-red)] bg-white rounded-full hover:bg-white/90 transition-colors"
+        >
+          採用情報を見る
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

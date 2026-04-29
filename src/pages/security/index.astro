@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="セキュリティ方針｜株式会社Contact"
+  description="株式会社Contactのセキュリティ方針。お預かりする個人情報・候補者情報・取引先情報の保護に関する取り組みを記載しています。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">セキュリティ方針</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          セキュリティ方針
+        </h1>
+        <p class="text-sm text-[var(--color-ink-muted)] font-en">
+          Information Security Policy
+        </p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="py-16 md:py-20">
+      <article class="mx-auto max-w-[800px] px-6 legal-prose">
+        <p>
+          株式会社Contact（以下「当社」）は、医療職のキャリア支援事業を運営するにあたり、お預かりする個人情報・候補者情報・取引先情報の保護に最優先で取り組みます。本方針は、当社の情報セキュリティに対する基本姿勢を示すものです。
+        </p>
+
+        <h2>1. 基本方針</h2>
+        <p>
+          当社は、情報資産を「機密性」「完全性」「可用性」の3観点で保護し、適切に管理することを基本方針とします。すべての役員・従業員・業務委託先は、本方針を遵守する責任を負います。
+        </p>
+
+        <h2>2. 適用範囲</h2>
+        <p>
+          本方針は、当社が事業活動を通じて取得・保有・処理するすべての情報資産（候補者の個人情報、取引先情報、社内データ、システムアクセス権限など）に適用されます。
+        </p>
+
+        <h2>3. 主な取り組み</h2>
+        <ul>
+          <li>従業員教育：定期的なセキュリティ研修を実施し、ヒューマンエラー由来のリスクを低減する</li>
+          <li>アクセス管理：業務上必要最小限の権限のみを付与し、アクセスログを記録・監査する</li>
+          <li>データ暗号化：保存・通信時のデータを業界標準の方式で暗号化する</li>
+          <li>クラウドサービス選定：ISO/IEC 27001・SOC 2 などの国際基準に準拠したサービスを採用する</li>
+          <li>インシデント対応：セキュリティ事象を発見した場合、速やかに調査・対応・関係者への通知を行う体制を整備する</li>
+        </ul>
+
+        <h2>4. AIの活用に関する留意</h2>
+        <p>
+          当社は AIエージェントを業務に積極活用していますが、AI への入力時に個人情報・機密情報を含めない運用ルールを徹底します。AI 経由で外部に情報が漏洩しない仕組みを設計し、適宜見直します。
+        </p>
+
+        <h2>5. 継続的改善</h2>
+        <p>
+          セキュリティ環境は変化し続けるため、本方針および関連するルール・運用手順は定期的に見直し、改善を続けます。
+        </p>
+
+        <h2>6. 改訂履歴</h2>
+        <ul>
+          <li>2026年4月28日：初版制定</li>
+        </ul>
+
+        <p class="mt-12 text-sm text-[var(--color-ink-navy)]/70">
+          お問い合わせ先：<a href="mailto:info@contact.ne.jp">info@contact.ne.jp</a><br />
+          株式会社Contact 情報セキュリティ責任者
+        </p>
+
+        <div class="mt-12 pt-8 border-t border-[var(--color-outline-variant)]">
+          <a
+            href="/"
+            class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-ink-navy)] bg-white border border-[var(--color-outline-variant)] rounded-full hover:bg-[var(--color-surface-dim)] transition-colors"
+          >
+            ← トップページへ戻る
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

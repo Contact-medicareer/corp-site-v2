@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="行動規範｜株式会社Contact"
+  description="株式会社Contactの行動規範。役員・従業員・業務委託先が遵守すべき行動原則を定めています。医療業界の信頼を担う事業者としての姿勢を明文化します。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-16 md:py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <nav
+          class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">行動規範</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          行動規範
+        </h1>
+        <p class="text-sm text-[var(--color-ink-muted)] font-en">Code of Conduct</p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="py-16 md:py-20">
+      <article class="mx-auto max-w-[800px] px-6 legal-prose">
+        <p>
+          株式会社Contact（以下「当社」）の役員・従業員・業務委託先（以下「関係者」）は、本行動規範に基づき、医療業界の信頼を担う事業者として誠実な事業活動を行います。本規範は、当社のミッション「医療に革命を起こす」と矛盾しない振る舞いを定義するものです。
+        </p>
+
+        <h2>1. 候補者・取引先への誠実な対応</h2>
+        <ul>
+          <li>候補者の人生に関わる意思決定を支援する立場として、誇大な表現・実態と異なる情報提供を行わない</li>
+          <li>候補者の個人情報・転職活動の事実を、本人の同意なく第三者に開示しない</li>
+          <li>取引先への情報提供は、候補者の同意範囲内に厳格に限定する</li>
+        </ul>
+
+        <h2>2. 法令遵守</h2>
+        <ul>
+          <li>労働関連法令（職業安定法、労働基準法等）を遵守する</li>
+          <li>個人情報保護法および関連ガイドラインに従って個人情報を取り扱う</li>
+          <li>反社会的勢力との関係を一切持たず、これらに対し毅然たる態度で臨む</li>
+        </ul>
+
+        <h2>3. ハラスメント防止</h2>
+        <ul>
+          <li>性別・年齢・出身・属性などを理由とする差別的言動を行わない</li>
+          <li>パワーハラスメント・セクシュアルハラスメント・その他あらゆるハラスメントを許容しない</li>
+          <li>関係者から相談があった場合、適切に対応し、被害者を保護する</li>
+        </ul>
+
+        <h2>4. 利益相反の回避</h2>
+        <ul>
+          <li>当社の利益と個人の利益が相反する場面では、当社および関係者の最大利益を優先する</li>
+          <li>利益相反のおそれがある取引・関係は、事前に開示・承認を得る</li>
+        </ul>
+
+        <h2>5. 機密情報の保護</h2>
+        <ul>
+          <li>業務上知り得た機密情報を、業務目的以外に使用・開示しない</li>
+          <li>退職後も継続して機密保持義務を負う</li>
+        </ul>
+
+        <h2>6. AI活用における倫理</h2>
+        <ul>
+          <li>AIに業務を委譲する際も、最終判断と責任は人間が担う</li>
+          <li>AIへの入力時に個人情報・機密情報を含めない</li>
+          <li>AI生成物を自社のアウトプットとして公開する前に、人間によるレビューを必ず行う</li>
+        </ul>
+
+        <h2>7. 違反時の対応</h2>
+        <p>
+          本規範に違反した行為が確認された場合、当社は事案の重大性に応じ、就業規則および関連法令に基づき適切な処分を行います。
+        </p>
+
+        <h2>8. 改訂履歴</h2>
+        <ul>
+          <li>2026年4月28日：初版制定</li>
+        </ul>
+
+        <p class="mt-12 text-sm text-[var(--color-ink-navy)]/70">
+          お問い合わせ先：<a href="mailto:info@contact.ne.jp">info@contact.ne.jp</a>
+        </p>
+
+        <div class="mt-12 pt-8 border-t border-[var(--color-outline-variant)]">
+          <a
+            href="/"
+            class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-ink-navy)] bg-white border border-[var(--color-outline-variant)] rounded-full hover:bg-[var(--color-surface-dim)] transition-colors"
+          >
+            ← トップページへ戻る
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

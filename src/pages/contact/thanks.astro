@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="お問い合わせを受け付けました｜株式会社Contact"
+  description="お問い合わせを受け付けました。3営業日以内にご返信いたします。"
+>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-[var(--color-surface-dim)] py-20 md:py-28">
+      <div class="mx-auto max-w-[800px] px-6 text-center">
+        <nav
+          class="inline-flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
+          aria-label="Breadcrumb"
+        >
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
+          <span>›</span>
+          <a href="/contact/" class="hover:text-[var(--color-revolution-red)] transition-colors">お問い合わせ</a>
+          <span>›</span>
+          <span class="text-[var(--color-ink-navy)]">受付完了</span>
+        </nav>
+        <div class="text-6xl md:text-7xl mb-6 leading-none">✉️</div>
+        <h1 class="text-3xl md:text-5xl font-bold text-[var(--color-ink-navy)] mb-3 leading-tight">
+          お問い合わせを<br />受け付けました
+        </h1>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="py-20 md:py-24">
+      <div class="mx-auto max-w-[720px] px-6 text-center">
+        <p class="text-base md:text-lg text-[var(--color-ink-navy)] leading-relaxed mb-8">
+          この度は株式会社Contactにお問い合わせいただき、<br />
+          誠にありがとうございます。
+        </p>
+        <p class="text-sm md:text-base text-[var(--color-ink-navy)]/80 leading-relaxed mb-12">
+          ご入力いただいた内容を確認のうえ、原則
+          <strong class="text-[var(--color-ink-navy)]">3営業日以内</strong> に担当者よりご返信いたします。<br />
+          また、ご記入いただいたメールアドレス宛に
+          <strong class="text-[var(--color-ink-navy)]">受付確認メール</strong> をお送りしております。<br />
+          届かない場合は、迷惑メールフォルダもご確認ください。
+        </p>
+        <div class="pt-12 border-t border-[var(--color-outline-variant)]">
+          <a
+            href="/"
+            class="inline-flex items-center px-8 py-4 text-base font-medium text-white bg-[var(--color-ink-navy)] rounded-full hover:bg-[var(--color-medicareer-blue-deep)] transition-colors"
+          >
+            トップページへ戻る
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
