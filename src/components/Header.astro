@@ -1,39 +1,59 @@
 ---
-// 共通ヘッダー — 1ファイル変更で全ページ反映（v1 で31ファイルに重複していた問題を解決）
+// Header — 共通ヘッダー（v1 由来：contact-corp-site-v1/src/index.html 18〜32行）
+// 設計：白背景 + sticky top + 採用CTA pill
 ---
 
-<header class="bg-white border-b border-[var(--color-outline-variant)] sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<header
+  class="bg-white/95 backdrop-blur-md border-b border-[var(--color-outline-variant)] sticky top-0 z-50"
+>
+  <div class="mx-auto max-w-[1200px] px-6 py-4 flex justify-between items-center">
     <a
       href="/"
-      class="text-2xl font-bold text-[var(--color-medicareer-blue)] hover:text-[var(--color-medicareer-blue-deep)] transition-colors"
+      class="flex items-center gap-2 text-lg font-medium text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
     >
-      Contact
+      <span
+        class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-[var(--color-medicareer-blue)] text-white font-medium text-sm font-en"
+      >
+        C
+      </span>
+      <span>Contact</span>
     </a>
-    <nav class="hidden md:flex items-center gap-8">
+    <nav class="hidden md:flex items-center gap-7 text-sm">
       <a
         href="/about/"
-        class="text-sm text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
+        class="text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
       >
         私たちについて
       </a>
       <a
-        href="/business/"
-        class="text-sm text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
+        href="#brands"
+        class="text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
       >
         事業
       </a>
       <a
+        href="/ai/"
+        class="text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
+      >
+        AI
+      </a>
+      <a
         href="/news/"
-        class="text-sm text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
+        class="text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
       >
         ニュース
       </a>
       <a
         href="/contact/"
-        class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-[var(--color-medicareer-blue)] rounded-md hover:bg-[var(--color-medicareer-blue-deep)] transition-colors"
+        class="text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors"
       >
         お問い合わせ
+      </a>
+      <a
+        href="/recruit/"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-[var(--color-medicareer-blue)] rounded-full hover:bg-[var(--color-medicareer-blue-deep)] transition-colors"
+      >
+        採用情報
       </a>
     </nav>
   </div>

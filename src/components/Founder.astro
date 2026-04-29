@@ -1,0 +1,51 @@
+---
+// Founder セクション — 代表取締役プロフィール（v1 由来：contact-corp-site-v1/src/index.html 191〜207行）
+// 設計：白背景 + 写真 + プロフィール
+---
+
+<section id="founder" class="bg-white py-24 md:py-32">
+  <div class="mx-auto max-w-[1200px] px-6">
+    <div
+      class="flex items-center gap-3 mb-4 text-xs tracking-[0.18em] uppercase text-[var(--color-ink-muted)] font-en"
+    >
+      <span class="text-[var(--color-medicareer-blue)] font-medium font-en text-base">04</span>
+      <span>Founder</span>
+    </div>
+
+    <h2
+      class="text-3xl md:text-4xl lg:text-5xl text-[var(--color-ink-navy)] mb-12 leading-tight"
+    >
+      代表取締役
+    </h2>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 md:gap-12 items-start max-w-[920px]"
+    >
+      <div class="aspect-square w-full rounded-2xl bg-[var(--color-surface-dim)] overflow-hidden">
+        <!-- 画像は public/images/ に配置済み（前回 Sub-Tech が複製） -->
+        <img
+          src="/images/yoda-ryunosuke.png"
+          alt="代表取締役 依田龍之介"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+      </div>
+      <div>
+        <p class="text-xs tracking-wider uppercase text-[var(--color-ink-muted)] mb-1 font-en">
+          株式会社Contact 代表取締役
+        </p>
+        <h3 class="text-2xl font-medium text-[var(--color-ink-navy)] mb-5">依田 龍之介</h3>
+        <p class="text-base text-[var(--color-ink-navy)]/85 leading-[1.9] mb-6">
+          国家資格（視能訓練士）取得後、大学院での研究と医療系ITベンチャーでの実務を両立。経済産業省主催のジャパン・ヘルスケアビジネスコンテスト2年連続出場。医療職のキャリア支援を1,000名以上行いつつ、自身も総フォロワー1.3万人のアカウントを運営。
+        </p>
+        <a
+          href="/about/"
+          class="text-sm font-medium text-[var(--color-medicareer-blue)] hover:gap-2 inline-flex items-center gap-1 transition-all"
+        >
+          代表メッセージを読む <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
