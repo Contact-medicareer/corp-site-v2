@@ -63,7 +63,7 @@ const { article } = Astro.props;
 const categoryStyle =
   article.category === 'セミナー'
     ? 'bg-[var(--color-coral)]/10 text-[var(--color-coral)] border border-[var(--color-coral)]/30'
-    : 'bg-[var(--color-medicareer-blue)]/10 text-[var(--color-medicareer-blue)] border border-[var(--color-medicareer-blue)]/30';
+    : 'bg-[var(--color-revolution-red)]/10 text-[var(--color-revolution-red)] border border-[var(--color-revolution-red)]/30';
 ---
 
 <BaseLayout title={`${article.title}｜株式会社Contact`} description={article.description}>
@@ -76,9 +76,9 @@ const categoryStyle =
           class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en flex-wrap"
           aria-label="Breadcrumb"
         >
-          <a href="/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">HOME</a>
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
           <span>›</span>
-          <a href="/news/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">
+          <a href="/news/" class="hover:text-[var(--color-revolution-red)] transition-colors">
             ニュース
           </a>
           <span>›</span>
@@ -112,7 +112,7 @@ const categoryStyle =
         >
           <a
             href="/news/"
-            class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-medicareer-blue)] bg-white border border-[var(--color-medicareer-blue)] rounded-full hover:bg-[var(--color-medicareer-blue)] hover:text-white transition-colors"
+            class="inline-flex items-center px-6 py-3 text-sm font-medium text-[var(--color-revolution-red)] bg-white border border-[var(--color-revolution-red)] rounded-full hover:bg-[var(--color-revolution-red)] hover:text-white transition-colors"
           >
             ← ニュース一覧に戻る
           </a>

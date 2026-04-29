@@ -106,7 +106,7 @@ const newsItems: NewsItem[] = [
 const categoryStyle = (cat: NewsCategory) =>
   cat === 'セミナー'
     ? 'bg-[var(--color-coral)]/10 text-[var(--color-coral)] border border-[var(--color-coral)]/30'
-    : 'bg-[var(--color-medicareer-blue)]/10 text-[var(--color-medicareer-blue)] border border-[var(--color-medicareer-blue)]/30';
+    : 'bg-[var(--color-revolution-red)]/10 text-[var(--color-revolution-red)] border border-[var(--color-revolution-red)]/30';
 ---
 
 <BaseLayout
@@ -122,7 +122,7 @@ const categoryStyle = (cat: NewsCategory) =>
           class="flex items-center gap-2 text-xs text-[var(--color-ink-muted)] mb-4 font-en"
           aria-label="Breadcrumb"
         >
-          <a href="/" class="hover:text-[var(--color-medicareer-blue)] transition-colors">HOME</a>
+          <a href="/" class="hover:text-[var(--color-revolution-red)] transition-colors">HOME</a>
           <span>›</span>
           <span class="text-[var(--color-ink-navy)]">ニュース</span>
         </nav>
@@ -152,7 +152,7 @@ const categoryStyle = (cat: NewsCategory) =>
                   >
                     {item.category}
                   </span>
-                  <span class="text-sm md:text-base text-[var(--color-ink-navy)] hover:text-[var(--color-medicareer-blue)] transition-colors leading-relaxed">
+                  <span class="text-sm md:text-base text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors leading-relaxed">
                     {item.title}
                   </span>
                 </a>
