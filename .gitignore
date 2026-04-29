@@ -26,3 +26,6 @@ pnpm-debug.log*
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# medicareer-shared-assets が postinstall で自動コピー（共通管理）
+public/images/yoda-ryunosuke.webp
