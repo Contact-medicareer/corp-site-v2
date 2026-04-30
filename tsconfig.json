@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "medicareer-config-base/tsconfig",
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
