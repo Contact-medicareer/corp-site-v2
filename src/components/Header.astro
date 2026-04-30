@@ -1,60 +1,27 @@
 ---
-// Header — 共通ヘッダー（v1 由来：contact-corp-site-v1/src/index.html 18〜32行）
-// 設計：白背景 + sticky top + 採用CTA pill
+// Header — shared-components の BaseHeader を corp-v2 用 props で呼び出す薄いラッパー
+// サイト固有の nav / CTA 設計はここで一元管理する
+import BaseHeader from 'medicareer-shared-components/components/BaseHeader.astro';
+
+const navItems = [
+  { label: '私たちについて', href: '/about/' },
+  { label: '事業', href: '#brands' },
+  { label: 'AI', href: '/ai/' },
+  { label: 'ニュース', href: '/news/' },
+  { label: 'お問い合わせ', href: '/contact/' },
+];
+
+const cta = {
+  label: '採用情報',
+  href: '/recruit/',
+  hoverBg: 'var(--color-revolution-red-dark)',
+};
 ---
 
-<header
-  class="bg-white/95 backdrop-blur-md border-b border-[var(--color-outline-variant)] sticky top-0 z-50"
->
-  <div class="mx-auto max-w-[1200px] px-6 py-4 flex justify-between items-center">
-    <a
-      href="/"
-      class="flex items-center gap-2 text-lg font-medium text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors"
-    >
-      <span
-        class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-[var(--color-revolution-red)] text-white font-medium text-sm font-en"
-      >
-        C
-      </span>
-      <span>Contact</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-7 text-sm">
-      <a
-        href="/about/"
-        class="text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors"
-      >
-        私たちについて
-      </a>
-      <a
-        href="#brands"
-        class="text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors"
-      >
-        事業
-      </a>
-      <a
-        href="/ai/"
-        class="text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors"
-      >
-        AI
-      </a>
-      <a
-        href="/news/"
-        class="text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors"
-      >
-        ニュース
-      </a>
-      <a
-        href="/contact/"
-        class="text-[var(--color-ink-navy)] hover:text-[var(--color-revolution-red)] transition-colors"
-      >
-        お問い合わせ
-      </a>
-      <a
-        href="/recruit/"
-        class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-[var(--color-revolution-red)] rounded-full hover:bg-[var(--color-revolution-red-dark)] transition-colors"
-      >
-        採用情報
-      </a>
-    </nav>
-  </div>
-</header>
+<BaseHeader
+  logoSymbol="C"
+  siteName="Contact"
+  primaryColor="var(--color-revolution-red)"
+  navItems={navItems}
+  cta={cta}
+/>
