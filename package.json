@@ -20,10 +20,11 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/Contact-medicareer/corp-site-v2#readme",
   "dependencies": {
-    "astro": "^6.1.10",
+    "@sentry/astro": "^10.51.0",
     "@tailwindcss/vite": "^4.0.0",
-    "tailwindcss": "^4.0.0",
-    "medicareer-shared-assets": "github:Contact-medicareer/medicareer-shared-assets"
+    "astro": "^6.1.10",
+    "medicareer-shared-assets": "github:Contact-medicareer/medicareer-shared-assets",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
