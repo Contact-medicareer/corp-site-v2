@@ -10,7 +10,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postinstall": "node -e \"require('medicareer-shared-assets').copyToPublic('public')\""
+    "postinstall": "node -e \"require('medicareer-shared-assets').copyToPublic('public')\"",
+    "lint": "eslint src --ext .js,.ts,.astro || exit 0",
+    "format": "prettier --write src"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,10 @@
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
+    "eslint": "^10.2.1",
+    "medicareer-config-base": "github:Contact-medicareer/medicareer-config-base",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.0.0"
   },
   "overrides": {
