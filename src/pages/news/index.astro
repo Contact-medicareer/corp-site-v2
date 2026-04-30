@@ -4,7 +4,15 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 // v1 由来：contact-corp-site-v1/src/news/index.html の14件
-// 将来 microCMS / src/content/news/ に移行予定
+//
+// 【2026-04-30 方針確定（依田判断）】
+// 当面ハードコード方式で維持する。
+// 理由：
+//   - 更新頻度が年4-5件と低く、microCMS 導入の工数（60-90分）に見合わない
+//   - microCMS 無料プランの API 制限・サービスロックインを避ける
+//   - 更新時は AI（Claude Code）に依頼すれば 5分で完了する運用で十分
+// 移行検討トリガー：
+//   - 月1件以上のペースで更新するようになったら microCMS or src/content/news/ を再検討
 type NewsCategory = 'NEWS' | 'セミナー';
 interface NewsItem {
   date: string;
