@@ -1,144 +1,49 @@
 ---
-// Footer — 共通フッター（v1 由来：contact-corp-site-v1/src/index.html 214〜262行）
-// 設計：ダーク背景 (ink-navy) + 4列グリッド
-const year = new Date().getFullYear();
+// Footer — shared-components の BaseFooter を corp-v2 用 props で呼び出す薄いラッパー
+// サイト固有のカラム設計はここで一元管理する
+import BaseFooter from 'medicareer-shared-components/components/BaseFooter.astro';
+
+const columns = [
+  {
+    title: '事業',
+    links: [
+      { label: '事業内容', href: '/business/' },
+      { label: 'メディキャリ ブランド', href: 'https://medicareer-brand-v1.vercel.app/', external: true },
+      { label: 'メディキャリ大学', href: 'https://lp-winova.jp/ct/lp02a/001/', external: true },
+      { label: 'メディキャリエージェント', href: 'https://medicareer-agent-lp.vercel.app/', external: true },
+      { label: 'メディキャリコーチング', href: 'https://training-lp.vercel.app/', external: true },
+      { label: 'コンタクトキャリア（祖業）', href: 'https://contact.ne.jp/media/', external: true },
+    ],
+  },
+  {
+    title: '会社情報',
+    links: [
+      { label: '私たちについて', href: '/about/' },
+      { label: 'ミッション', href: '/about/mission/' },
+      { label: 'メンバー', href: '/about/members/' },
+      { label: '会社概要', href: '/about/company/' },
+      { label: 'ニュース', href: '/news/' },
+      { label: '採用情報', href: '/recruit/' },
+      { label: 'お問い合わせ', href: '/contact/' },
+    ],
+  },
+  {
+    title: '法的情報',
+    links: [
+      { label: 'プライバシーポリシー', href: '/privacy-policy/' },
+      { label: '利用規約', href: '/terms/' },
+      { label: '特定商取引法表記', href: '/legal/' },
+      { label: 'セキュリティ方針', href: '/security/' },
+      { label: '行動規範', href: '/code-of-conduct/' },
+      { label: 'DE&Iポリシー', href: '/diversity-equity-inclusion/' },
+    ],
+  },
+];
 ---
 
-<footer class="bg-[var(--color-ink-navy)] text-white">
-  <div class="mx-auto max-w-[1200px] px-6 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-      <!-- ブランド -->
-      <div class="md:col-span-1">
-        <h4 class="text-base font-medium mb-3 text-white">株式会社Contact</h4>
-        <p class="text-sm text-white/70 leading-relaxed">
-          医療に革命を起こす。<br />
-          Contact, Inc. — Founded 2022.
-        </p>
-      </div>
-
-      <!-- 事業 -->
-      <div>
-        <h4 class="text-sm font-medium mb-3 text-white/90">事業</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li>
-            <a href="/business/" class="hover:text-white transition-colors">事業内容</a>
-          </li>
-          <li>
-            <a
-              href="https://medicareer-brand-v1.vercel.app/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-white transition-colors"
-            >
-              メディキャリ ブランド
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://lp-winova.jp/ct/lp02a/001/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-white transition-colors"
-            >
-              メディキャリ大学
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medicareer-agent-lp.vercel.app/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-white transition-colors"
-            >
-              メディキャリエージェント
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://training-lp.vercel.app/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-white transition-colors"
-            >
-              メディキャリコーチング
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://contact.ne.jp/media/"
-              target="_blank"
-              rel="noopener"
-              class="hover:text-white transition-colors"
-            >
-              コンタクトキャリア（祖業）
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- 会社情報 -->
-      <div>
-        <h4 class="text-sm font-medium mb-3 text-white/90">会社情報</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li>
-            <a href="/about/" class="hover:text-white transition-colors">私たちについて</a>
-          </li>
-          <li>
-            <a href="/about/mission/" class="hover:text-white transition-colors">ミッション</a>
-          </li>
-          <li>
-            <a href="/about/members/" class="hover:text-white transition-colors">メンバー</a>
-          </li>
-          <li>
-            <a href="/about/company/" class="hover:text-white transition-colors">会社概要</a>
-          </li>
-          <li>
-            <a href="/news/" class="hover:text-white transition-colors">ニュース</a>
-          </li>
-          <li>
-            <a href="/recruit/" class="hover:text-white transition-colors">採用情報</a>
-          </li>
-          <li>
-            <a href="/contact/" class="hover:text-white transition-colors">お問い合わせ</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- 法的情報 -->
-      <div>
-        <h4 class="text-sm font-medium mb-3 text-white/90">法的情報</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li>
-            <a href="/privacy-policy/" class="hover:text-white transition-colors">
-              プライバシーポリシー
-            </a>
-          </li>
-          <li>
-            <a href="/terms/" class="hover:text-white transition-colors">利用規約</a>
-          </li>
-          <li>
-            <a href="/legal/" class="hover:text-white transition-colors">特定商取引法表記</a>
-          </li>
-          <li>
-            <a href="/security/" class="hover:text-white transition-colors">セキュリティ方針</a>
-          </li>
-          <li>
-            <a href="/code-of-conduct/" class="hover:text-white transition-colors">行動規範</a>
-          </li>
-          <li>
-            <a href="/diversity-equity-inclusion/" class="hover:text-white transition-colors">
-              DE&amp;Iポリシー
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div
-      class="border-t border-white/15 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-2"
-    >
-      <span class="text-xs text-white/50">© {year} Contact, Inc. All rights reserved.</span>
-      <span class="text-xs text-white/40 font-en">Founded 2022 in Karuizawa, Japan</span>
-    </div>
-  </div>
-</footer>
+<BaseFooter
+  brandName="株式会社Contact"
+  brandTagline="医療に革命を起こす。<br/>Contact, Inc. — Founded 2022."
+  columns={columns}
+  copyrightRight="Founded 2022 in Karuizawa, Japan"
+/>
